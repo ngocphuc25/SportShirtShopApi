@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SWD.SportShirtShop.Api.props" />
+</Project>
