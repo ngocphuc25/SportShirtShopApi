@@ -3,11 +3,16 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace SWD.SportShirtShop.Repo.Entities;
 
 public partial class SportShirtShopDBContext : DbContext
 {
+    public SportShirtShopDBContext()
+    {
+    }
+
     public SportShirtShopDBContext(DbContextOptions<SportShirtShopDBContext> options)
         : base(options)
     {
@@ -36,7 +41,18 @@ public partial class SportShirtShopDBContext : DbContext
     public virtual DbSet<Tournament> Tournaments { get; set; }
 
     public virtual DbSet<TournamentClub> TournamentClubs { get; set; }
+    public static string GetConnectionString(string connectionStringName)
+    {
+        var config = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
 
+        string connectionString = config.GetConnectionString(connectionStringName);
+        return connectionString;
+    }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection"));
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
@@ -58,8 +74,9 @@ public partial class SportShirtShopDBContext : DbContext
             entity.Property(e => e.Phone).HasColumnName("phone");
             entity.Property(e => e.Username).HasColumnName("username");
         });
+        
 
-        modelBuilder.Entity<Club>(entity =>
+    modelBuilder.Entity<Club>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Club__3213E83FD9F914C2");
 
