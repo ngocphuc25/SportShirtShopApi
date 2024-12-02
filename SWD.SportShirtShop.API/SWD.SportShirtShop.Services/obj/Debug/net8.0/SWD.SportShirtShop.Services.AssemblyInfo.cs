@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SWD.SportShirtShop.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63493b8a15ef4491133496d2fc3194785acc3d8b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3586b740f9d6e4ddcbf658e9f97062f01a6d05a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("SWD.SportShirtShop.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWD.SportShirtShop.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

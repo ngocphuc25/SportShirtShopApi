@@ -17,6 +17,8 @@ public partial class Order
 
     public string PaymentStatus { get; set; }
 
+    public string ShipAddress { get; set; }
+
     public string Code { get; set; }
 
     public DateTime? CreateDate { get; set; }
