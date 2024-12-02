@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\BadRequestException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SWD.SportShirtShop.Services\\Exceptions\\BadRequestException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\ForbiddenMethodException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SWD.SportShirtShop.Services\\Exceptions\\ForbiddenMethodException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\NotFoundException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SWD.SportShirtShop.Services\\Exceptions\\NotFoundException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\sportshirtshopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\sportshirtshopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,6 +67,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BadRequestException.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\BadRequestException.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Exceptions\\BadRequestException.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\BadRequestException.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Exceptions\\BadRequestException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T05:40:25.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ForbiddenMethodException.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\ForbiddenMethodException.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Exceptions\\ForbiddenMethodException.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\ForbiddenMethodException.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Exceptions\\ForbiddenMethodException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T05:40:24.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T05:40:23.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SportShirtShopDBContext.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\SportShirtShopDBContext.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\SportShirtShopDBContext.cs",
@@ -62,12 +113,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\SportShirtShopDBContext.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T01:08:41.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T01:08:41.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SWD.SportShirtShop.Services.csproj",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj",
@@ -75,8 +125,7 @@
               "RelativeToolTip": "SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-27T14:01:24.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T14:01:24.484Z"
             }
           ]
         },

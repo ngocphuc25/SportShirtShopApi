@@ -8,22 +8,44 @@ GO
 
 CREATE TABLE Account (
     id INT PRIMARY KEY,
-    username NVARCHAR(MAX),
-    email NVARCHAR(MAX),
-    password NVARCHAR(MAX),
-    firstName NVARCHAR(MAX),
-    lastName NVARCHAR(MAX),
-    gender NVARCHAR(MAX),
-    address NVARCHAR(MAX),
-    phone NVARCHAR(MAX),
+    username NVARCHAR(200),
+    email NVARCHAR(200),
+    password NVARCHAR(200),
+    Name NVARCHAR(200),
+    
+    gender NVARCHAR(200),
+    address NVARCHAR(200),
+    phone NVARCHAR(15),
     Dob DATETIME,
     Role NVARCHAR(MAX),
     Status NVARCHAR(MAX)
 );
 
+CREATE TABLE Orders (
+    id INT PRIMARY KEY,
+    id_Account INT,
+    note NVARCHAR(MAX),
+    Status NVARCHAR(MAX),
+    PaymentStatus NVARCHAR(10),
+	ship_address NVARCHAR(200),
+    code NVARCHAR(MAX),
+    createDate DATETIME,
+    createAccount INT,
+    FOREIGN KEY (id_Account) REFERENCES Account(id)
+);
+CREATE TABLE Club (
+    id INT PRIMARY KEY,
+    Name NVARCHAR(MAX),
+    Logo NVARCHAR(MAX),
+    Status NVARCHAR(MAX),
+    note NVARCHAR(MAX),
+    code NVARCHAR(MAX),
+    createDate DATETIME,
+    createAccount INT
+);
 CREATE TABLE Player (
     id INT PRIMARY KEY,
-    id_Club INT,
+    id_Club INT  null,
     name NVARCHAR(MAX),
     dob DATE,
     note NVARCHAR(MAX),
@@ -95,8 +117,8 @@ CREATE TABLE PlayerInTournamentClub (
 
 CREATE TABLE Shirt (
     id INT PRIMARY KEY,
-    id_shirtEdition INT,
-    id_PlayerinTournamentClub INT,
+    id_shirtEdition INT null ,
+    id_PlayerinTournamentClub INT Null,
     name NVARCHAR(MAX),
     price DECIMAL(18, 2),
     description NVARCHAR(MAX),
@@ -109,28 +131,8 @@ CREATE TABLE Shirt (
     FOREIGN KEY (id_PlayerinTournamentClub) REFERENCES PlayerInTournamentClub(id)
 );
 
-CREATE TABLE Club (
-    id INT PRIMARY KEY,
-    Name NVARCHAR(MAX),
-    Logo NVARCHAR(MAX),
-    Status NVARCHAR(MAX),
-    note NVARCHAR(MAX),
-    code NVARCHAR(MAX),
-    createDate DATETIME,
-    createAccount INT
-);
 
-CREATE TABLE Orders (
-    id INT PRIMARY KEY,
-    id_Account INT,
-    note NVARCHAR(MAX),
-    Status NVARCHAR(MAX),
-    PaymentStatus NVARCHAR(MAX),
-    code NVARCHAR(MAX),
-    createDate DATETIME,
-    createAccount INT,
-    FOREIGN KEY (id_Account) REFERENCES Account(id)
-);
+
 
 CREATE TABLE OrderDetail (
     id INT PRIMARY KEY,
