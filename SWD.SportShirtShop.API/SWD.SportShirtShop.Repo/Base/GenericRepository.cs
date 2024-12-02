@@ -1,15 +1,12 @@
-﻿
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using SWD.SportShirtShop.Repo.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EXE2.Store.Repositories.Base
+namespace SWD.SportShirtShop.Repo.Base
 {
     public class GenericRepository<T> where T : class
     {
@@ -108,6 +105,7 @@ namespace EXE2.Store.Repositories.Base
             return hasTrackings ? await _context.Set<T>().FirstOrDefaultAsync(expression)
                                 : await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(expression);
         }
+
         #region Separating asign entity and save operators        
 
         public void PrepareCreate(T entity)
@@ -164,4 +162,7 @@ namespace EXE2.Store.Repositories.Base
             };
         }
     }
-}
+    }
+
+
+
