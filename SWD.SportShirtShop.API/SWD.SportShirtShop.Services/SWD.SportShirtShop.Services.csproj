@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SWD.SportShirtShop.Common\SWD.SportShirtShop.Common.csproj" />
+    <ProjectReference Include="..\SWD.SportShirtShop.Repo\SWD.SportShirtShop.Repo.csproj" />
+  </ItemGroup>
+
 </Project>
