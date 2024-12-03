@@ -17,12 +17,12 @@ namespace SWD.SportShirtShop.Services.Service
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _configuration;
-        private readonly Account _account;
+        //private readonly Account _account;
 
-        public TokenService(IConfiguration configuration, Account account)
+        public TokenService(IConfiguration configuration)
         {
             _configuration = configuration;
-            _account = account;
+         
         }
 
         public string GenerateAccessToken(int accountId, string role, string name, string email, string phone)

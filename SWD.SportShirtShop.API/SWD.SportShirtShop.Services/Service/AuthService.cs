@@ -2,10 +2,11 @@
 using SWD.SportShirtShop.Repo;
 using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Base;
-using SWD.SportShirtShop.Services.Exceptions;
+using SWD.SportShirtShop.Common.Exceptions;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.Auth;
 using SWD.SportShirtShop.Services.ResponseModel.Auth;
+using SWD.SportShirtShop.Common;
 
 
 namespace SWD.SportShirtShop.Services.Service
@@ -15,11 +16,11 @@ namespace SWD.SportShirtShop.Services.Service
         private readonly UnitOfWork _unitOfWork;
         private readonly TokenService _tokenService;
 
-        AuthService()
+       public AuthService()
         {
 
         }
-        AuthService(UnitOfWork unitOfWork, TokenService tokenService)
+       public AuthService(UnitOfWork unitOfWork, TokenService tokenService)
         {
             _unitOfWork = unitOfWork;
             _tokenService = tokenService;
@@ -55,9 +56,20 @@ namespace SWD.SportShirtShop.Services.Service
             }
 
 
-            var newAccount = request.Adapt<Account>();
-            newAccount.Status = "ACTIVE";
-            newAccount.Role = null;
+            //var newAccount = request.Adapt<Account>();
+            Account newAccount = new Account
+            {
+                Email = request.Email,
+                Gender = request.Gender,
+                Password = request.Password,
+                Phone = request.Phone,
+                Username = request.UserName,
+                Dob = request.dob,
+                Name = request.UserName,
+                Status = "ACTIVE",
+                Role = "Customer"
+            };
+
             //newAccount.Password = HashPassword(request.Password);
             var ac = await _unitOfWork.Account.CreateAsync(newAccount);
             var account1 = await _unitOfWork.Account.FindOneAsync(a => a.Email == request.Email);
