@@ -1,12 +1,8 @@
 ﻿using SWD.SportShirtShop.Repo.Entities;
-using SWD.SportShirtShop.Repo.Repositories;
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.RequetsModel.Club;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.Claims;
+
 
 namespace SWD.SportShirtShop.Services.Interface
 {
@@ -14,7 +10,9 @@ namespace SWD.SportShirtShop.Services.Interface
     {
         Task<IBusinessResult> GetAll();
         Task<IBusinessResult> GetById(int id);
-        Task<IBusinessResult> Save(ClubCreateRequest accountCustomer);
+        Task<IBusinessResult> Create(ClubCreateRequest clubCreateRequest, ClaimsPrincipal claim);
+        Task<IBusinessResult> Update(ClubUpdateRequets clubUpdateRequets, ClaimsPrincipal claim);
+        Task<IBusinessResult> Save(Club club);
         Task<IBusinessResult> DeleteById(int id);
     }
 }

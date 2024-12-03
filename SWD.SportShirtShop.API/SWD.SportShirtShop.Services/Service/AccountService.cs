@@ -19,10 +19,10 @@ namespace SWD.SportShirtShop.Services.Service
 
         public async Task<IBusinessResult> GetAll()
         {
-            var categories = await _unitOfWork.Account.GetAllAsync();
-            if (categories != null)
+            var accounts = await _unitOfWork.Account.GetAllAsync();
+            if (accounts != null)
             {
-                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, accounts);
             }
             else
             {

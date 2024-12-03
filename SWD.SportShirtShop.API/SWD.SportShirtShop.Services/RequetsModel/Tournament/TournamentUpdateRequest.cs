@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SWD.SportShirtShop.Services.RequetsModel.Tournament
 {
-    public class TournamentCreateRequest
+    public class TournamentUpdateRequest
     {
         public int Id { get; set; }
 
