@@ -15,8 +15,8 @@ namespace SWD.SportShirtShop.Services.Interface
     {
         Task<IBusinessResult> GetAll();
         Task<IBusinessResult> GetById(int id);
-        Task<IBusinessResult> Create(TournamentCreateRequest tournamentCreateRequest, ClaimsPrincipal claim);
-        Task<IBusinessResult> Update(TournamentUpdateRequest tournamentUpdateRequets, ClaimsPrincipal claim);
+        Task<IBusinessResult> CreateTournament(TournamentCreateRequest tournamentCreateRequest);
+        Task<IBusinessResult> UpdateTournament(TournamentUpdateRequest tournamentUpdateRequets);
         Task<IBusinessResult> Save(Tournament tournament);
         Task<IBusinessResult> DeleteById(int id);
     }

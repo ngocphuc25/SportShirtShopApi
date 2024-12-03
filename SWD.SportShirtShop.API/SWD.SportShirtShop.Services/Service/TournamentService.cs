@@ -17,8 +17,8 @@ namespace SWD.SportShirtShop.Services.Service
 {
     public class TournamentService : ITournamentService
     {
-        private readonly ITournamentService _tournamentService;
         private readonly UnitOfWork _unitOfWork;
+        public TournamentService(UnitOfWork unitOfWork) { _unitOfWork = unitOfWork; }
 
         public async Task<IBusinessResult> GetAll()
         {
@@ -111,18 +111,11 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> Create(TournamentCreateRequest tournamentCreateRequest, ClaimsPrincipal claim)
+        public async Task<IBusinessResult> CreateTournament(TournamentCreateRequest tournamentCreateRequest)
         {
             try
             {
                 int result = -1;
-                var userId = claim.FindFirst("id")?.Value;
-                if (userId == null)
-                {
-                    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have iTournament");
-                }
-                //var product = C.Adapt<Product>();
-
                 Tournament newTournament = new Tournament
                 {
                     Id = tournamentCreateRequest.Id,
@@ -153,21 +146,12 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> Update(TournamentUpdateRequest tournamentUpdateRequets, ClaimsPrincipal claim)
+        public async Task<IBusinessResult> UpdateTournament(TournamentUpdateRequest tournamentUpdateRequets)
         {
             try
             {
                 int result = -1;
-                var userId = claim.FindFirst("id")?.Value;
-                if (userId == null)
-                {
-                    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have idUser");
-                }
                 var tournament = _unitOfWork.Tournament.GetById(tournamentUpdateRequets.Id);
-
-
-
-
 
                 if (tournament != null)
                 {

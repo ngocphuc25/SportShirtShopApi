@@ -1,4 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SWD.SportShirtShop.Repo.Entities;
+using SWD.SportShirtShop.Services.Base;
+using SWD.SportShirtShop.Services.Interface;
+using SWD.SportShirtShop.Services.RequetsModel.Club;
+using SWD.SportShirtShop.Services.RequetsModel.Tournament;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,37 +13,56 @@ namespace SWD.SportShirtShop.Api.Controllers
     [ApiController]
     public class TournamentController : ControllerBase
     {
+        private readonly SportShirtShopDBContext _context;
+        private readonly ITournamentService _tournamentService;
+        public TournamentController(ITournamentService tournamentService)
+        {
+            _context = new SportShirtShopDBContext();
+            _tournamentService = tournamentService;
+        }
 
         // GET: api/<TournamentController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IBusinessResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _tournamentService.GetAll();
         }
 
         // GET api/<TournamentController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IBusinessResult> Get(int id)
         {
-            return "value";
+            return await _tournamentService.GetById(id);
         }
 
         // POST api/<TournamentController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IBusinessResult> Post(TournamentCreateRequest tournamentCreateRequest)
         {
+            return await _tournamentService.CreateTournament(tournamentCreateRequest);
         }
 
         // PUT api/<TournamentController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IBusinessResult> Put(TournamentUpdateRequest tournamentUpdateRequest)
         {
+            return await _tournamentService.UpdateTournament(tournamentUpdateRequest);
         }
 
         // DELETE api/<TournamentController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            var tournament = await _context.Accounts.FindAsync(id);
+            if (tournament == null)
+            {
+                return NotFound();
+            }
+
+            _context.Accounts.Remove(tournament);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }
