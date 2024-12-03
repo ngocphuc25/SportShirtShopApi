@@ -13,6 +13,12 @@ namespace SWD.SportShirtShop.Repo.Repositories
     {
         private readonly SportShirtShopDBContext _dbContext;
         public AccountRepository() { }
+
+        public SportShirtShopDBContext Context()
+        {
+            return _context;
+        }
+
         public AccountRepository(SportShirtShopDBContext dbContext) => _dbContext = dbContext; 
 
         public async Task<Account> FindOneAsync(string username, string password)
