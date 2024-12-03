@@ -14,6 +14,8 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Auth
         public required string Email { get; set; }
         public required string UserName { get; set; }
         public required string Password { get; set; } = null!;
+        public DateTime dob { get; set; }
+        public string Gender {  get; set; } 
         public string Name { get; set; }
         public string Phone { get; set; }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWD.SportShirtShop.Services.Exceptions
+namespace SWD.SportShirtShop.Common
 {
     public class Const
     {

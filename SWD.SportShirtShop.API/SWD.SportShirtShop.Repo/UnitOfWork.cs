@@ -12,6 +12,9 @@ namespace SWD.SportShirtShop.Repo
     {
         private SportShirtShopDBContext _unitOfWorkContext;
         private AccountRepository _accountRepository;
+        private ClubRepository _clubRepository;
+        private TournamentRepository _tournamentRepository;
+        private PlayerRepository _playerRepository;
         public UnitOfWork()
         {
             _unitOfWorkContext = new SportShirtShopDBContext();  
@@ -20,6 +23,8 @@ namespace SWD.SportShirtShop.Repo
         {
             get { return _accountRepository ??= new AccountRepository(_unitOfWorkContext); }
         }
-
+        public ClubRepository Club { get { return _clubRepository ??= new ClubRepository(_unitOfWorkContext); } }
+        public PlayerRepository Player { get { return _playerRepository ??= new PlayerRepository(_unitOfWorkContext);} }
+        public TournamentRepository Tournament { get { return _tournamentRepository ??= new TournamentRepository(_unitOfWorkContext); } }
     }
 }

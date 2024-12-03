@@ -15,19 +15,17 @@ public partial class Account
 
     public string Password { get; set; }
 
-    public string Name { get; set; }
-
-    public string Gender { get; set; }
-
-    public string Address { get; set; }
-
-    public string Phone { get; set; }
-
-    public DateTime? Dob { get; set; }
-
     public string Role { get; set; }
 
     public string Status { get; set; }
+
+    public string Name { get; set; }
+
+    public DateTime? Dob { get; set; }
+
+    public string Gender { get; set; }
+
+    public string Phone { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

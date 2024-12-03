@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SWD.SportShirtShop.Services.Exceptions
+namespace SWD.SportShirtShop.Common.Exceptions
 {
     public class UnauthorizedException : ApplicationException
     {

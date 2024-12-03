@@ -1,0 +1,15 @@
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\bin\Debug\net8.0\SWD.SportShirtShop.Repo.deps.json
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\bin\Debug\net8.0\SWD.SportShirtShop.Repo.runtimeconfig.json
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\bin\Debug\net8.0\SWD.SportShirtShop.Repo.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\bin\Debug\net8.0\SWD.SportShirtShop.Repo.pdb
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.csproj.AssemblyReference.cache
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.AssemblyInfoInputs.cache
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.AssemblyInfo.cs
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.csproj.CoreCompileInputs.cache
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.sourcelink.json
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\refint\SWD.SportShirtShop.Repo.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.pdb
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.genruntimeconfig.cache
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\ref\SWD.SportShirtShop.Repo.dll

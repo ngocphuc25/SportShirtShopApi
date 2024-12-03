@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SWD.SportShirtShop.Services.Base;
-using SWD.SportShirtShop.Services.Exceptions;
+using SWD.SportShirtShop.Common.Exceptions;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.Auth;
 using SWD.SportShirtShop.Services.Service;
+using SWD.SportShirtShop.Common;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
