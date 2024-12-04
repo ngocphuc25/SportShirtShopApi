@@ -53,13 +53,13 @@ namespace SWD.SportShirtShop.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var tournament = await _context.Accounts.FindAsync(id);
+            var tournament = await _context.Tournaments.FindAsync(id);
             if (tournament == null)
             {
                 return NotFound();
             }
 
-            _context.Accounts.Remove(tournament);
+            _context.Tournaments.Remove(tournament);
             await _context.SaveChangesAsync();
 
             return NoContent();
