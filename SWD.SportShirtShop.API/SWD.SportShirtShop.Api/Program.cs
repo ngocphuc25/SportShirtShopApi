@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SWD.SportShirtShop.Repo;
+using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Extension;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.Service;
@@ -16,8 +18,12 @@ builder.Services.AddScoped<UnitOfWork>();
 
 // Register your services here
 builder.Services.AddScoped<TokenService>();
-
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+
+
+
+
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(options =>
 {

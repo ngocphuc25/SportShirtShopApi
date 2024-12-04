@@ -14,15 +14,15 @@ namespace SWD.SportShirtShop.Services.Service
 {
     public class AccountService : IAccountService
     {
-        private readonly IAccountService _accountService;
         private readonly UnitOfWork _unitOfWork;
+        public AccountService(UnitOfWork unitOfWork) { _unitOfWork = unitOfWork; }
 
         public async Task<IBusinessResult> GetAll()
         {
-            var categories = await _unitOfWork.Account.GetAllAsync();
-            if (categories != null)
+            var accounts = await _unitOfWork.Account.GetAllAsync();
+            if (accounts != null)
             {
-                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, accounts);
             }
             else
             {
@@ -51,10 +51,11 @@ namespace SWD.SportShirtShop.Services.Service
                 var accountTmp = _unitOfWork.Account.GetById(accountCustomer.Id);
                 if (accountTmp != null)
                 {
-                    result = await _unitOfWork.Account.UpdateAsync(accountCustomer);
+                    _unitOfWork.Account.Context().Entry(accountTmp).CurrentValues.SetValues(accountCustomer);
+                    result = await _unitOfWork.Account.UpdateAsync(accountTmp);
                     if (result > 0)
                     {
-                        return new BusinessResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, accountCustomer);
+                        return new BusinessResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, accountTmp);
                     }
                     else
                     {
