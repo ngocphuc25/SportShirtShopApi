@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWD.SportShirtShop.Services.RequetsModel.Tournament
+namespace SWD.SportShirtShop.Services.Service
 {
-    public class TournamentCreateRequest
+    internal class ShirtService
     {
     }
 }
