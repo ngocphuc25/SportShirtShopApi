@@ -19,6 +19,9 @@ builder.Services.AddScoped<UnitOfWork>();
 // Register your services here
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IClubService, ClubService>();
+builder.Services.AddScoped<IPlayerService, PlayerService>();
+builder.Services.AddScoped<ITournamentService, TournamentService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 
 
