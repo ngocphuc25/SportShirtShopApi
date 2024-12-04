@@ -16,8 +16,8 @@ namespace SWD.SportShirtShop.Services.Service
 {
     public class PlayerService : IPlayerService
     {
-        private readonly IPlayerService _playerService;
         private readonly UnitOfWork _unitOfWork;
+        public PlayerService(UnitOfWork unitOfWork) { _unitOfWork = unitOfWork; }
 
         public async Task<IBusinessResult> GetAll()
         {
@@ -74,17 +74,11 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> Create(PlayerCreateRequest playerCreateRequest, ClaimsPrincipal claim)
+        public async Task<IBusinessResult> CreatePlayer(PlayerCreateRequest playerCreateRequest)
         {
             try
             {
                 int result = -1;
-                var userId = claim.FindFirst("id")?.Value;
-                if (userId == null)
-                {
-                    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have idUser");
-                }
-                //var product = C.Adapt<Product>();
 
                 Player newPlayer = new Player
                 {
@@ -115,24 +109,15 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> Update(PlayerUpdateRequest playerUpdateRequets, ClaimsPrincipal claim)
+        public async Task<IBusinessResult> UpdatePlayer(PlayerUpdateRequest playerUpdateRequets)
         {
             try
             {
                 int result = -1;
-                var userId = claim.FindFirst("id")?.Value;
-                if (userId == null)
-                {
-                    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have idUser");
-                }
                 var player = _unitOfWork.Player.GetById(playerUpdateRequets.Id);
-
-
-
-
-
                 if (player != null)
                 {
+                    _unitOfWork.Player.Context().Entry(player).CurrentValues.SetValues(player);
                     result = await _unitOfWork.Player.UpdateAsync(player);
                     if (result > 0)
                     {
