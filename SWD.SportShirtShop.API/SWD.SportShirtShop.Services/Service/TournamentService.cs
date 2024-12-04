@@ -9,6 +9,7 @@ using SWD.SportShirtShop.Services.RequetsModel.Tournament;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -155,6 +156,7 @@ namespace SWD.SportShirtShop.Services.Service
 
                 if (tournament != null)
                 {
+                    _unitOfWork.Tournament.Context().Entry(tournament).CurrentValues.SetValues(tournamentUpdateRequets);
                     result = await _unitOfWork.Tournament.UpdateAsync(tournament);
                     if (result > 0)
                     {
