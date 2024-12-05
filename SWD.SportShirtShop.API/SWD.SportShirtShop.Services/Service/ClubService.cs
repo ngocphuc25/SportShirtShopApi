@@ -11,8 +11,8 @@ namespace SWD.SportShirtShop.Services.Service
 {
     public class ClubService 
     {
-        private readonly IClubService _clubService;
         private readonly UnitOfWork _unitOfWork;
+        public ClubService(UnitOfWork unitOfWork) {_unitOfWork = unitOfWork;}
 
         public async Task<IBusinessResult> GetAll()
         {
@@ -69,17 +69,11 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> Create(ClubCreateRequest clubCreateRequest, ClaimsPrincipal claim)
+        public async Task<IBusinessResult> CreateClub(ClubCreateRequest clubCreateRequest)
         {
             try
             {
                 int result = -1;
-                var userId = claim.FindFirst("id")?.Value;
-                if (userId == null)
-                {
-                    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have idUser");
-                }
-                //var product = C.Adapt<Product>();
 
                 Club newClub = new Club
                 {
@@ -110,24 +104,16 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> Update(ClubUpdateRequets clubUpdateRequets, ClaimsPrincipal claim)
+        public async Task<IBusinessResult> UpdateClub(ClubUpdateRequets clubUpdateRequest)
         {
             try
             {
                 int result = -1;
-                var userId = claim.FindFirst("id")?.Value;
-                if (userId == null)
-                {
-                    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have idUser");
-                }
-                var club = _unitOfWork.Club.GetById(clubUpdateRequets.Id);
-
-
-
-
+                var club = _unitOfWork.Club.GetById(clubUpdateRequest.Id);
 
                 if (club != null)
                 {
+                    _unitOfWork.Club.Context().Entry(club).CurrentValues.SetValues(clubUpdateRequest);
                     result = await _unitOfWork.Club.UpdateAsync(club);
                     if (result > 0)
                     {

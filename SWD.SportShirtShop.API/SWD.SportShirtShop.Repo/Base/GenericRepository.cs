@@ -23,6 +23,11 @@ namespace SWD.SportShirtShop.Repo.Base
             _context = context;
         }
 
+        public SportShirtShopDBContext Context()
+        {
+            return _context;
+        }
+
         public List<T> GetAll()
         {
             return _context.Set<T>().ToList();

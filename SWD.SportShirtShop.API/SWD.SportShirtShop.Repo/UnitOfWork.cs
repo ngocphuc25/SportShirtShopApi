@@ -33,5 +33,19 @@ namespace SWD.SportShirtShop.Repo
         public ShirtRepository Shirt { get {return _shirtRepository ??= new ShirtRepository(_unitOfWorkContext); }}
         public OrderRepository Order { get { return _orderRepository ??= new OrderRepository(_unitOfWorkContext);} }
      
-        }
+        
+        private PlayerInTournamentClubRepository _playerInTournamentClubRepository;
+        private TournamentClubRepository _tournamentClubRepository;
+        private ImageRepository _imageRepository;
+
+        public UnitOfWork() { _unitOfWorkContext = new SportShirtShopDBContext(); }
+        public AccountRepository Account { get { return _accountRepository ??= new AccountRepository(_unitOfWorkContext); } }
+        public ClubRepository Club { get { return _clubRepository ??= new ClubRepository(_unitOfWorkContext); } }
+        public PlayerRepository Player { get { return _playerRepository ??= new PlayerRepository(_unitOfWorkContext);} }
+        public TournamentRepository Tournament { get { return _tournamentRepository ??= new TournamentRepository(_unitOfWorkContext); } }
+        public TournamentClubRepository TournamentClub { get { return _tournamentClubRepository ??= new TournamentClubRepository(_unitOfWorkContext); } }
+        public ImageRepository Image { get { return _imageRepository ??= new ImageRepository(_unitOfWorkContext); } }
+        public PlayerInTournamentClubRepository PlayerInTournamentClub { get{ return _playerInTournamentClubRepository ??= new PlayerInTournamentClubRepository(_unitOfWorkContext); } }
+    }
+    
 }
