@@ -29,9 +29,9 @@ namespace SWD.SportShirtShop.Repo
         public ClubRepository Club { get { return _clubRepository ??= new ClubRepository(_unitOfWorkContext); } }
         public PlayerRepository Player { get { return _playerRepository ??= new PlayerRepository(_unitOfWorkContext);} }
         public TournamentRepository Tournament { get { return _tournamentRepository ??= new TournamentRepository(_unitOfWorkContext); } }
-        public ShirtEditionRepository ShirtEdition { get { return _shirtEditionRepository??= new ShirtEditionRepository(_unitOfWorkContext)} }
-        public ShirtRepository ShirtRepository { get {return _shirtRepository ??= new ShirtRepository(_unitOfWorkContext); }}
-        public OrderRepository OrderRepository { get { return _orderRepository ??= new OrderRepository(_unitOfWorkContext);} }
-
+        public ShirtEditionRepository ShirtEdition { get { return _shirtEditionRepository ??= new ShirtEditionRepository(_unitOfWorkContext); } }
+        public ShirtRepository Shirt { get {return _shirtRepository ??= new ShirtRepository(_unitOfWorkContext); }}
+        public OrderRepository Order { get { return _orderRepository ??= new OrderRepository(_unitOfWorkContext);} }
+     
         }
 }

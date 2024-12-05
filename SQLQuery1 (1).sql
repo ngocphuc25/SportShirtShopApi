@@ -23,15 +23,16 @@ CREATE TABLE Account (
 CREATE TABLE Orders (
     id INT IDENTITY(1,1) PRIMARY KEY,
    
-    note NVARCHAR(MAX),
+    note NVARCHAR(MAX) null,
     status NVARCHAR(MAX),
 	id_payment INT ,
+	name Nvarchar(30),
 	payment_method NVARCHAR(10),
     payment_status NVARCHAR(10),
 	ship_address NVARCHAR(200),
     code NVARCHAR(MAX),
-    createDate DATETIME,
-    createAccount INT,
+    createDate DATETIME
+    
 	FOREIGN KEY (id_payment) REFERENCES Payment(id)
     FOREIGN KEY (id_Account) REFERENCES Account(id)
 );
@@ -63,9 +64,9 @@ CREATE TABLE Payment (
     method NVARCHAR(MAX),
     status NVARCHAR(MAX),
     note NVARCHAR(MAX),
-    code NVARCHAR(MAX),
+    
     createDate DATETIME,
-    createAccount INT,
+    updateDate Datetime,
     FOREIGN KEY (id_Orders) REFERENCES Orders(id)
 );
 

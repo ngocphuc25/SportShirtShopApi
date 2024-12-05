@@ -12,7 +12,7 @@ namespace SWD.SportShirtShop.Services.Interface
     {
         Task<IBusinessResult> GetAll();
         Task<IBusinessResult> GetById(int id);
-        Task<IBusinessResult> Save(Parallel accountCustomer);
+
         Task<IBusinessResult> DeleteById(int id);
         Task<IBusinessResult> CreateOrder(CreateOrderRequest createOrderRequest);
     }

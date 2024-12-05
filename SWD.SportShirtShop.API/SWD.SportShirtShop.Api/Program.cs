@@ -15,7 +15,7 @@ var configuration = builder.Configuration;
 //builder.Services.AddApplicationServices();
 builder.Services.AddScoped<UnitOfWork>();
 
-
+builder.Services.AddApplicationServices();
 // Register your services here
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
