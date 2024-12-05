@@ -23,6 +23,9 @@ builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<ITournamentService, TournamentService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITournamentClubService, TournamentClubService>();
+builder.Services.AddScoped<IPlayerInTournamentClubService, PlayerInTournamentClubService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 
 
