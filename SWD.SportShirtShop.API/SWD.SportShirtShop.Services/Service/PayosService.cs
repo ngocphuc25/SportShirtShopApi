@@ -44,8 +44,8 @@ namespace SWD.SportShirtShop.Services.Service
             }
             var payOS = new PayOS(clientId, apiKey, checksumKey);
 
-            //  var domain = "https://localhost:7187";
-            var domain = "https://merciapp-e8cgheehc2bggzdv.japaneast-01.azurewebsites.net";
+             var domain = "https://localhost:7036";
+            //var domain = "https://merciapp-e8cgheehc2bggzdv.japaneast-01.azurewebsites.net";
             var paymentLinkRequest = new PaymentData(
                 orderCode: int.Parse(order.Code),
                 amount: Convert.ToInt32(order.TotalAmmount),
@@ -71,28 +71,31 @@ namespace SWD.SportShirtShop.Services.Service
           );
         }
 
-        public async Task<IBusinessResult> ReturnUrl(IQueryCollection queryParams)
+        public async Task<IBusinessResult> ReturnUrl(PayosReturnUrl querry)
         {
-            var querry = new PayosReturnUrl
-            {
-                Code = queryParams["code"],
-                Id = queryParams["id"],
-                Cancel = bool.TryParse(queryParams["cancel"], out var cancel) && cancel,
-                Status = queryParams["status"],
-                OrderCode = queryParams["orderCode"]
-            };
+            //var querry = new PayosReturnUrl
+            //{
+            //    Code = queryParams["code"].ToString(),
+            //    Id = queryParams["id"].ToString(),
+            //    Cancel = queryParams["cancel"].ToString(),
+            //    Status = queryParams["status"].ToString(),
+            //    OrderCode = queryParams["orderCode"].ToString()
+            //};
+            //Console.WriteLine( querry );
             var order = await _unitOfWork.Order.GetOrderByOrderCode(querry.OrderCode);
+           
             if (order == null)
             {
                 throw new Exception("Không có idOrder");
             }
+           Console.WriteLine(order.TotalAmmount);
            PaymentCreateRequest payment = new PaymentCreateRequest
             {
                 IdOrders = order.Id,
-                Price = order.TotalAmmount,
+              
                 Method = "Thanh toán Payos",
                 Status = querry.Status,
-                Note= "duw"
+                Price= order.TotalAmmount,  
             };
             if (querry.Code == "00" && querry.Status == "PAID")
             {
@@ -101,19 +104,22 @@ namespace SWD.SportShirtShop.Services.Service
             else
             {
                 payment.Status = "Thanh toán thất bại";
+                order.Status = "Đã hủy thanh toán";
             }
-            order.Status = payment.Status;
+            order.PaymentStatus = payment.Status;
+       
             await _unitOfWork.Order.UpdateAsync(order);
 
             var savePayment = await _paymentService.Create(payment);
             if (querry.Code == "00" && querry.Status == "PAID")
             {
-                return new BusinessResult(Const.SUCCESS_CREATE_CODE, "Thanh toán thành công", savePayment);
+                return new BusinessResult(Const.SUCCESS_CREATE_CODE, "Thanh toán thành công");
             }
             else
             {
-                return new BusinessResult(Const.FAIL_CREATE_CODE, "Thanh toán thất bại", savePayment);
+                return new BusinessResult(Const.FAIL_CREATE_CODE, "Thanh toán thất bại");
             }
+
         }
     }
 }

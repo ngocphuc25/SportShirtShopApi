@@ -66,7 +66,7 @@ namespace SWD.SportShirtShop.Services.Service
                 Payment payment = new Payment
                 {
                     IdOrders = request.IdOrders,
-                    Note= "duw",
+                    Price = request.Price,
                     Status = request.Status,
                     Method= request.Method,
                     CreateDate = DateTime.Now,

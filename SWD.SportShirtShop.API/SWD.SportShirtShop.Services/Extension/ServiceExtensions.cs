@@ -41,14 +41,17 @@ namespace SWD.SportShirtShop.Services.Extension
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IShirtService, ShirtService>();
             services.AddScoped<IOrderService, OrderService>();  
+            services.AddScoped<IPayosService, PayosService>();
+            services.AddScoped<PayosService> ();
+            services.AddScoped<IPaymentService, PaymentService>();
             // services.AddScoped<IEmailService,EmailService>();
-            
+
             //services.AddScoped<IReviewService, ReviewService>();
             //services.AddRazorComponents();
             //services.AddScoped<IEmailService, EmailService>();
-            //services.AddScoped<IOrderService, OrderService>();
+
             //services.AddScoped<IVnpaymentService, VNPaymentService>();
-            //services.AddScoped<IPaymentService, PaymentService>();
+
             //services.AddScoped<IProductRelationService, ProductRelationService>();
             //services.AddScoped<IPayosService, PayosService>();
 

@@ -4029,10 +4029,7 @@
         },
         "runtime": {
           "bin/placeholder/SWD.SportShirtShop.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
