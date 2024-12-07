@@ -147,16 +147,16 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> UpdateTournament(TournamentUpdateRequest tournamentUpdateRequets)
+        public async Task<IBusinessResult> UpdateTournament(TournamentUpdateRequest tournamentUpdateRequest)
         {
             try
             {
                 int result = -1;
-                var tournament = _unitOfWork.Tournament.GetById(tournamentUpdateRequets.Id);
+                var tournament = _unitOfWork.Tournament.GetById(tournamentUpdateRequest.Id);
 
                 if (tournament != null)
                 {
-                    _unitOfWork.Tournament.Context().Entry(tournament).CurrentValues.SetValues(tournamentUpdateRequets);
+                    _unitOfWork.Tournament.Context().Entry(tournament).CurrentValues.SetValues(tournamentUpdateRequest);
                     result = await _unitOfWork.Tournament.UpdateAsync(tournament);
                     if (result > 0)
                     {

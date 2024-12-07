@@ -16,10 +16,10 @@ namespace SWD.SportShirtShop.Services.Service
 
         public async Task<IBusinessResult> GetAll()
         {
-            var categories = await _unitOfWork.Club.GetAllAsync();
-            if (categories != null)
+            var club = await _unitOfWork.Club.GetAllAsync();
+            if (club != null)
             {
-                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, club);
             }
             else
             {
@@ -29,14 +29,14 @@ namespace SWD.SportShirtShop.Services.Service
 
         public async Task<IBusinessResult> GetById(int id)
         {
-            var account = await _unitOfWork.Club.GetByIdAsync(id);
-            if (account == null)
+            var club = await _unitOfWork.Club.GetByIdAsync(id);
+            if (club == null)
             {
                 return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
             else
             {
-                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, account);
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, club);
             }
         }
 
@@ -44,21 +44,21 @@ namespace SWD.SportShirtShop.Services.Service
         {
             try
             {
-                var account = await _unitOfWork.Club.GetByIdAsync(id);
-                if (account == null)
+                var club = await _unitOfWork.Club.GetByIdAsync(id);
+                if (club == null)
                 {
                     return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
                 }
                 else
                 {
-                    var result = await _unitOfWork.Club.RemoveAsync(account);
+                    var result = await _unitOfWork.Club.RemoveAsync(club);
                     if (result)
                     {
-                        return new BusinessResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, account);
+                        return new BusinessResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, club);
                     }
                     else
                     {
-                        return new BusinessResult(Const.FAIL_DELETE_CODE, Const.FAIL_DELETE_MSG, account);
+                        return new BusinessResult(Const.FAIL_DELETE_CODE, Const.FAIL_DELETE_MSG, club);
                     }
 
                 }
@@ -140,9 +140,9 @@ namespace SWD.SportShirtShop.Services.Service
             try
             {
                 int result = -1;
-                var accountTmp = _unitOfWork.Club.GetById(club.Id);
+                var clubTmp = _unitOfWork.Club.GetById(club.Id);
 
-                if (accountTmp != null)
+                if (clubTmp != null)
                 {
 
 
