@@ -9,7 +9,7 @@ using System.Security.Claims;
 
 namespace SWD.SportShirtShop.Services.Service
 {
-    public class ClubService :IClubService
+    public class ClubService 
     {
         private readonly UnitOfWork _unitOfWork;
         public ClubService(UnitOfWork unitOfWork) {_unitOfWork = unitOfWork;}

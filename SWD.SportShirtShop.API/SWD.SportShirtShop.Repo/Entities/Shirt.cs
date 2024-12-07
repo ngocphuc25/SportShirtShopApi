@@ -17,9 +17,15 @@ public partial class Shirt
 
     public decimal? Price { get; set; }
 
+    public decimal? SalePrice { get; set; }
+
+    public int? TotalSold { get; set; }
+
     public string Description { get; set; }
 
     public int? QuantityStock { get; set; }
+
+    public string Status { get; set; }
 
     public string Code { get; set; }
 

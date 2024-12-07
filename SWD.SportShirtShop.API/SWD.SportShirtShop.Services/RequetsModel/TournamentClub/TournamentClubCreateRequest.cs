@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWD.SportShirtShop.Services.RequetsModel.TournammentClub
+namespace SWD.SportShirtShop.Services.RequetsModel.TournamentClub
 {
     public class TournamentClubCreateRequest
     {

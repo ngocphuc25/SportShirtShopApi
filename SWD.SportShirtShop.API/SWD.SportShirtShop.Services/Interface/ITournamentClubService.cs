@@ -2,7 +2,6 @@
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.RequetsModel.PlayerInTournamentClub;
 using SWD.SportShirtShop.Services.RequetsModel.TournamentClub;
-using SWD.SportShirtShop.Services.RequetsModel.TournammentClub;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -2,7 +2,6 @@
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.TournamentClub;
-using SWD.SportShirtShop.Services.RequetsModel.TournammentClub;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

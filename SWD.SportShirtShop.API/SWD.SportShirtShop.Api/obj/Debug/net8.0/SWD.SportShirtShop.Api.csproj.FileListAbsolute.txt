@@ -182,3 +182,10 @@ D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtSh
 D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\SWD.SportShirtShop.Services.pdb
 D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\SWD.SportShirtShop.Common.pdb
 D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\SWD.SportShirtShop.Repo.pdb
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\obj\Debug\net8.0\SWD.SportShirtShop.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Api\bin\Debug\net8.0\payos-lib-backend-dotnet.dll
