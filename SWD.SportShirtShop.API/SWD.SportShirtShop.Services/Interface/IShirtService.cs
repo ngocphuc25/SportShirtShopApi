@@ -1,4 +1,5 @@
 ﻿using SWD.SportShirtShop.Services.Base;
+using SWD.SportShirtShop.Services.RequetsModel.Shirt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace SWD.SportShirtShop.Services.Interface
     {
         Task<IBusinessResult> GetAll();
         Task<IBusinessResult> GetById(int id);
-       
+        Task<IBusinessResult> Create(ShirtCreateRequest request);
         Task<IBusinessResult> DeleteById(int id);
+        Task<IBusinessResult> Update(ShirtUpdateRequest request);
     }
 }

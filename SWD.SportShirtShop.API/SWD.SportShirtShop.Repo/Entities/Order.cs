@@ -9,21 +9,25 @@ public partial class Order
 {
     public int Id { get; set; }
 
-    public int? IdAccount { get; set; }
-
     public string Note { get; set; }
 
     public string Status { get; set; }
+
+    public int? IdAccount { get; set; }
+
+    public string Name { get; set; }
+
+    public string PaymentMethod { get; set; }
 
     public string PaymentStatus { get; set; }
 
     public string ShipAddress { get; set; }
 
+    public decimal? TotalAmmount { get; set; }
+
     public string Code { get; set; }
 
     public DateTime? CreateDate { get; set; }
-
-    public int? CreateAccount { get; set; }
 
     public virtual Account IdAccountNavigation { get; set; }
 

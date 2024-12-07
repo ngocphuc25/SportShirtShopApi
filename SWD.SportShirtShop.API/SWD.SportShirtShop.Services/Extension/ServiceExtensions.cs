@@ -39,8 +39,10 @@ namespace SWD.SportShirtShop.Services.Extension
             services.AddScoped<TokenService>();
             services.AddScoped<IShirtEditionSerivice, ShirtEditionSerivce>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IShirtService, ShirtService>();
+            services.AddScoped<IOrderService, OrderService>();  
             // services.AddScoped<IEmailService,EmailService>();
-            //services.AddScoped<IOrderService, OrderService>();
+            
             //services.AddScoped<IReviewService, ReviewService>();
             //services.AddRazorComponents();
             //services.AddScoped<IEmailService, EmailService>();

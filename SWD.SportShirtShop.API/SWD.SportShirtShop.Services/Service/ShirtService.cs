@@ -82,12 +82,13 @@ namespace SWD.SportShirtShop.Services.Service
                 int result = -1;
                 //var userId = claim.FindFirst("id")?.Value;
 
-
+                var idPlayer= _unitOfWork.PlayerInTournamentClub.GetById(request.IdPlayerinTournamentClub.Value);
                 var idAccount = _unitOfWork.Account.GetById(request.CreateAccount.Value);
                 var idShirtEdition = _unitOfWork.ShirtEdition.GetById(request.IdShirtEdition.Value);
                 //var playerIntournament = _unitOfWork.Tournament.GetById(request.IdPlayerinTournamentClub.Value);
                 if (idShirtEdition == null) { request.IdShirtEdition = null; }
                 if (idAccount == null) { request.CreateAccount = null; }
+                if (idPlayer == null) { request.IdPlayerinTournamentClub = null; }
                 
            //     if (tournament == null) { request.IdTournament = null; }
                 //if (userId == null)
@@ -108,6 +109,8 @@ namespace SWD.SportShirtShop.Services.Service
                     CreateDate = DateTime.Now,
                     UpdatedDate = DateTime.Now,
                     CreateAccount = request.CreateAccount,
+                    Status = request.Status
+                    
                     
                 };
 

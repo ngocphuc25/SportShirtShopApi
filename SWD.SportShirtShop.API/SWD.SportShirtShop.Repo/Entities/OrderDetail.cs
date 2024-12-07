@@ -13,11 +13,19 @@ public partial class OrderDetail
 
     public int? IdShirt { get; set; }
 
+    public string Name { get; set; }
+
     public int? Quantity { get; set; }
 
     public decimal? Price { get; set; }
 
     public decimal? Subtotal { get; set; }
+
+    public DateTime? CreateDate { get; set; }
+
+    public DateTime? UpdateDate { get; set; }
+
+    public decimal? SalePrice { get; set; }
 
     public virtual Order IdOrdersNavigation { get; set; }
 

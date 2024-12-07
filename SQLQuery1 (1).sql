@@ -22,18 +22,19 @@ CREATE TABLE Account (
 
 CREATE TABLE Orders (
     id INT IDENTITY(1,1) PRIMARY KEY,
-   
     note NVARCHAR(MAX) null,
     status NVARCHAR(MAX),
-	id_payment INT ,
+	id_Account INT null,
+	
 	name Nvarchar(30),
 	payment_method NVARCHAR(10),
     payment_status NVARCHAR(10),
 	ship_address NVARCHAR(200),
+	totalAmmount decimal(18,2),
     code NVARCHAR(MAX),
-    createDate DATETIME
+    createDate DATETIME,
     
-	FOREIGN KEY (id_payment) REFERENCES Payment(id)
+
     FOREIGN KEY (id_Account) REFERENCES Account(id)
 );
 CREATE TABLE Club (
@@ -63,6 +64,7 @@ CREATE TABLE Payment (
     id_Orders INT,
     method NVARCHAR(MAX),
     status NVARCHAR(MAX),
+	price decimal(18,2),
     note NVARCHAR(MAX),
     
     createDate DATETIME,
@@ -124,9 +126,12 @@ CREATE TABLE Shirt (
     id_PlayerinTournamentClub INT Null,
     name NVARCHAR(MAX),
     price DECIMAL(18, 2),
+	salePrice Decimal(18,2) null,
+	totalSold int null,
     description NVARCHAR(MAX),
     quantity_stock INT,
-    code NVARCHAR(MAX),
+	status nvarchar(30),
+    code NVARCHAR(20),
     createDate DATETIME,
     createAccount INT,
     updatedDate DATETIME,
@@ -141,9 +146,14 @@ CREATE TABLE OrderDetail (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_Orders INT,
     id_Shirt INT,
+	name NVARCHAr(500),
     quantity INT,
     price DECIMAL(18, 2),
     subtotal DECIMAL(18, 2),
+	createDate DATETIME,
+	updateDate Datetime,
+	salePrice decimal(18,2),
+
     FOREIGN KEY (id_Orders) REFERENCES Orders(id),
     FOREIGN KEY (id_Shirt) REFERENCES Shirt(id)
 );
