@@ -109,7 +109,8 @@ namespace SWD.SportShirtShop.Services.Service
                     CreateDate = DateTime.Now,
                     UpdatedDate = DateTime.Now,
                     CreateAccount = request.CreateAccount,
-                    Status = request.Status
+                    Status = request.Status,
+                    TotalSold=0
                     
                     
                 };

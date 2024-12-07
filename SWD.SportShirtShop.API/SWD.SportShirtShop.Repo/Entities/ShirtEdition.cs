@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace SWD.SportShirtShop.Repo.Entities;
 
@@ -22,8 +23,8 @@ public partial class ShirtEdition
     public DateTime? CreateDate { get; set; }
 
     public int? CreateAccount { get; set; }
-
+    [JsonIgnore]
     public virtual Tournament IdTournamentNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Shirt> Shirts { get; set; } = new List<Shirt>();
 }

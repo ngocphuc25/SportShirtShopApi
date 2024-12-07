@@ -25,10 +25,11 @@ CREATE TABLE Orders (
     note NVARCHAR(MAX) null,
     status NVARCHAR(MAX),
 	id_Account INT null,
-	
-	name Nvarchar(30),
-	payment_method NVARCHAR(10),
-    payment_status NVARCHAR(10),
+	payment_method NVARCHAR(20),
+    payment_status NVARCHAR(30),
+	name NVARCHAR(150),
+	phone NVARCHAR(30),
+	email NVARCHAR(100),
 	ship_address NVARCHAR(200),
 	totalAmmount decimal(18,2),
     code NVARCHAR(MAX),
@@ -65,8 +66,6 @@ CREATE TABLE Payment (
     method NVARCHAR(MAX),
     status NVARCHAR(MAX),
 	price decimal(18,2),
-    note NVARCHAR(MAX),
-    
     createDate DATETIME,
     updateDate Datetime,
     FOREIGN KEY (id_Orders) REFERENCES Orders(id)

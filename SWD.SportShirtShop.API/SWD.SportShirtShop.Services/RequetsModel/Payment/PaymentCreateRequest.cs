@@ -17,7 +17,7 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Payment
 
         public decimal? Price { get; set; }
 
-        public string Note { get; set; }
+      
 
     }
 }

@@ -17,8 +17,6 @@ public partial class Payment
 
     public decimal? Price { get; set; }
 
-    public string Note { get; set; }
-
     public DateTime? CreateDate { get; set; }
 
     public DateTime? UpdateDate { get; set; }

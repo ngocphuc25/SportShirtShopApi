@@ -5,6 +5,7 @@ using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.Order;
+using SWD.SportShirtShop.Services.RequetsModel.Payment;
 using SWD.SportShirtShop.Services.RequetsModel.Shirt;
 using System;
 using System.Collections.Generic;
@@ -18,15 +19,19 @@ namespace SWD.SportShirtShop.Services.Service
     public class OrderService :IOrderService
     {
         private readonly IOrderService _orderService;
+        private readonly IPaymentService _paymentService;   
+        private readonly IPayosService _payosService;
         private readonly UnitOfWork _unitOfWork;
         private static Random random = new Random();
-        public OrderService(UnitOfWork unitOfWork)
+        public OrderService(UnitOfWork unitOfWork,IPayosService payosService,IPaymentService paymentService)
         {
             _unitOfWork = unitOfWork;
+            _payosService = payosService;
+            _paymentService = paymentService;
         }
         public async Task<IBusinessResult> GetAll()
         {
-            var categories = await _unitOfWork.Shirt.GetAllAsync();
+            var categories = await _unitOfWork.Order.GetAllAsync();
             if (categories != null)
             {
                 return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);
@@ -39,7 +44,7 @@ namespace SWD.SportShirtShop.Services.Service
 
         public async Task<IBusinessResult> GetById(int id)
         {
-            var account = await _unitOfWork.Shirt.GetByIdAsync(id);
+            var account = await _unitOfWork.Order.GetByIdAsync(id);
             if (account == null)
             {
                 return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
@@ -54,7 +59,7 @@ namespace SWD.SportShirtShop.Services.Service
         {
             try
             {
-                var account = await _unitOfWork.Shirt.GetByIdAsync(id);
+                var account = await _unitOfWork.Order.GetByIdAsync(id);
                 if (account == null)
                 {
                     return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
@@ -63,7 +68,10 @@ namespace SWD.SportShirtShop.Services.Service
                 {
                     int result = -1;
                     //     account.Status = "Deleted";
-                    result = await _unitOfWork.Shirt.UpdateAsync(account);
+                    result = await _unitOfWork.Order.UpdateAsync(account);
+
+
+
                     if (result > 0)
                     {
                         return new BusinessResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, account);
@@ -121,24 +129,23 @@ namespace SWD.SportShirtShop.Services.Service
                     // Cập nhật số lượng hàng tồn kho sau khi thêm vào đơn hàng
                     product.QuantityStock = product.QuantityStock - item.Quantity;
 
-
+                  await  _unitOfWork.Shirt.UpdateAsync(product);
                 }
+                
                 _unitOfWork.SaveChangesWithTransaction();
                 Order newOrder = new Order
                 {
                     IdAccount = request.IdAccount,
+                    Name= request.Name,
+                    Phone= request.Phone,
+                    Email= request.Email,
                     Code = GenerateOrderCode(8),
-                    Name=request.Name,
                     PaymentMethod=request.PaymentMethod,
                     CreateDate = DateTime.Now,
                     Status = status,
                     PaymentStatus = "Chưa thanh toán",
                     Note = request.Note,
-                    ShipAddress = request.ShipAddress,
-                    TotalAmmount = request.TotalAmmount,
-                    
-
-
+                    ShipAddress = request.ShipAddress
                 };
                 decimal totalAmount = 0;
                 foreach (var item in request.Items)
@@ -156,7 +163,7 @@ namespace SWD.SportShirtShop.Services.Service
                     {
                         IdShirt = product.Id,
                         Quantity = item.Quantity,
-                       
+                        Name=product.Name,
                         Price = product.Price,
                         SalePrice = product.SalePrice,
                         CreateDate = DateTime.Now,
@@ -172,9 +179,25 @@ namespace SWD.SportShirtShop.Services.Service
                 }
                 newOrder.TotalAmmount = totalAmount;
                 result = await _unitOfWork.Order.CreateAsync(newOrder);
+                if (newOrder.PaymentMethod == "Payos")
+                {
+                    return await _payosService.Create(newOrder);
+                }
+                else
+                {
+                    PaymentCreateRequest paymentrequest = new PaymentCreateRequest
+                    {
+                        IdOrders = newOrder.Id,
+                        Status = "Chưa Thanh Toán",
+                        Method = "COD",
+                        Price = newOrder.TotalAmmount,
+                     
+                    };
+                    _paymentService.Create(paymentrequest);
 
+                }
 
-                if (result > 0)
+                    if (result > 0)
 
                 {
                     return new BusinessResult(Const.SUCCESS_CREATE_CODE, Const.SUCCESS_CREATE_MSG, newOrder);

@@ -24,9 +24,8 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Shirt
 
         public string Code { get; set; }
 
-
-
         public int? CreateAccount { get; set; }
+
 
         
     }
