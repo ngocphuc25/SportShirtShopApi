@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\shirtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\shirtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\shirteditionserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\shirteditionserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\requetsmodel\\shirt\\shirtcreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\requetsmodel\\shirt\\shirtcreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +23,36 @@
       "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\requetsmodel\\shirt\\shirtupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\requetsmodel\\shirtedition\\shirteditioncreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\requetsmodel\\shirtedition\\shirteditioncreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\shirt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\shirt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\tournamentclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\tournamentclubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\shirtedition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\shirtedition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\playerintournamentclub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\playerintournamentclub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,18 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\shirt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\shirt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\shirtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\shirtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\shirteditionserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\shirteditionserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\payosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|solutionrelative:swd.sportshirtshop.services\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A6840A0-A179-4DAF-8D9A-9654B5AFA829}|SWD.SportShirtShop.Services\\SWD.SportShirtShop.Services.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.services\\requetsmodel\\order\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{83CB7F2F-E087-49F6-8EC0-E43466AC9385}|SWD.SportShirtShop.Api\\SWD.SportShirtShop.Api.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83CB7F2F-E087-49F6-8EC0-E43466AC9385}|SWD.SportShirtShop.Api\\SWD.SportShirtShop.Api.csproj|solutionrelative:swd.sportshirtshop.api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.repo\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D522B1-5124-43F7-AB90-23DE4F75F550}|SWD.SportShirtShop.Repo\\SWD.SportShirtShop.Repo.csproj|solutionrelative:swd.sportshirtshop.repo\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83CB7F2F-E087-49F6-8EC0-E43466AC9385}|SWD.SportShirtShop.Api\\SWD.SportShirtShop.Api.csproj|d:\\ky 8\\sportshirtshop\\sportshirtshopapi\\swd.sportshirtshop.api\\swd.sportshirtshop.api\\controllers\\shirteditioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,7 +166,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAB8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T12:50:47.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ShirtUpdateRequest.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\RequetsModel\\Shirt\\ShirtUpdateRequest.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\RequetsModel\\Shirt\\ShirtUpdateRequest.cs",
@@ -172,79 +193,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ShirtEdition.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABsAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:52:38.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerInTournamentClub.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:52:18.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Account.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Account.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Account.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:52:00.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Image.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Image.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Image.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Image.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Image.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:51:59.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ShirtCreateRequest.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\RequetsModel\\Shirt\\ShirtCreateRequest.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\RequetsModel\\Shirt\\ShirtCreateRequest.cs",
               "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\RequetsModel\\Shirt\\ShirtCreateRequest.cs",
               "RelativeToolTip": "SWD.SportShirtShop.Services\\RequetsModel\\Shirt\\ShirtCreateRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T16:50:41.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Shirt.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:51:01.379Z",
               "EditorCaption": ""
             },
             {
@@ -255,66 +211,14 @@
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\OrderService.cs",
               "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\OrderService.cs",
               "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\OrderService.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAAAJMAAAA1AAAA",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAAAKEAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T12:01:50.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Player.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Player.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Player.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Player.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Player.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAABkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T15:44:23.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PayosService.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PayosService.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\PayosService.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PayosService.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\PayosService.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAFYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:56:30.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAADkAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:56:28.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PlayerService.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:57:08.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "ShirtEditionSerivce.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\ShirtEditionSerivce.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\ShirtEditionSerivce.cs",
@@ -327,33 +231,172 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "ShirtService.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\ShirtService.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\ShirtService.cs",
               "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\ShirtService.cs",
               "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\ShirtService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHEAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T11:56:32.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
+              "Title": "Shirt.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Shirt.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:51:01.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShirtEditionCreateRequest.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\RequetsModel\\ShirtEdition\\ShirtEditionCreateRequest.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\RequetsModel\\ShirtEdition\\ShirtEditionCreateRequest.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\RequetsModel\\ShirtEdition\\ShirtEditionCreateRequest.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\RequetsModel\\ShirtEdition\\ShirtEditionCreateRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:56:47.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TournamentClubService.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\TournamentClubService.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\TournamentClubService.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\TournamentClubService.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\TournamentClubService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:51:25.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlayerInTournamentClub.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\PlayerInTournamentClub.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABkAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:52:18.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Player.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Player.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Player.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Player.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABkAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:44:23.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ShirtEdition.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\ShirtEdition.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:52:38.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Order.cs",
               "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Order.cs",
               "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Order.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACcAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T12:50:48.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Image.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Image.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Image.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Image.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Image.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:51:59.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Account.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Account.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Account.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:52:00.611Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "PayosService.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PayosService.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\PayosService.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PayosService.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\PayosService.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAAAFYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T11:56:30.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\PaymentService.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAADkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T11:56:28.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PlayerService.cs",
+              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
+              "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
+              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
+              "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\PlayerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T11:57:08.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "CreateOrderRequest.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\RequetsModel\\Order\\CreateOrderRequest.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\RequetsModel\\Order\\CreateOrderRequest.cs",
@@ -361,12 +404,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Services\\RequetsModel\\Order\\CreateOrderRequest.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T13:21:34.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T13:21:34.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "SportShirtShopDBContext.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\SportShirtShopDBContext.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\SportShirtShopDBContext.cs",
@@ -374,12 +416,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Repo\\SportShirtShopDBContext.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAwwCAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:47:47.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T16:47:47.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\UnitOfWork.cs",
@@ -387,12 +428,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Repo\\UnitOfWork.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:47:54.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T16:47:54.3Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Payment.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\Payment.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\Payment.cs",
@@ -400,12 +440,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\Payment.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T12:50:47.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T12:50:47.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Api\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Api\\Controllers\\PaymentController.cs",
@@ -413,25 +452,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\PaymentController.cs",
               "ViewState": "AQIAAEkAAAAAAAAAAAAAwFUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T12:11:42.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T12:11:42.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "OrderDetail.cs",
-              "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
-              "RelativeDocumentMoniker": "SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
-              "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
-              "RelativeToolTip": "SWD.SportShirtShop.Repo\\Entities\\OrderDetail.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T12:50:47.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "PlayerInTournamentClubController.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Api\\Controllers\\PlayerInTournamentClubController.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Api\\Controllers\\PlayerInTournamentClubController.cs",
@@ -439,12 +464,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\PlayerInTournamentClubController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T13:19:42.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T13:19:42.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "TournamentClubController.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Api\\Controllers\\TournamentClubController.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Api\\Controllers\\TournamentClubController.cs",
@@ -452,12 +476,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\TournamentClubController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T13:02:38.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T13:02:38.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Api\\Controllers\\PlayerController.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Api\\Controllers\\PlayerController.cs",
@@ -465,12 +488,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\PlayerController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T13:02:38.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T13:02:38.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ShirtEditionController.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Api\\Controllers\\ShirtEditionController.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Api\\Controllers\\ShirtEditionController.cs",
@@ -478,12 +500,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\ShirtEditionController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T13:02:32.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T13:02:32.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ShirtController.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Api\\Controllers\\ShirtController.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Api\\Controllers\\ShirtController.cs",
@@ -491,12 +512,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\ShirtController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T13:02:31.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T13:02:31.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "TournamentService.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\TournamentService.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\TournamentService.cs",
@@ -504,12 +524,11 @@
               "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\TournamentService.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAAAAUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:56:35.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T11:56:35.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Extension\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Extension\\ServiceExtensions.cs",
@@ -517,8 +536,7 @@
               "RelativeToolTip": "SWD.SportShirtShop.Services\\Extension\\ServiceExtensions.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:57:12.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T11:57:12.765Z"
             }
           ]
         },
