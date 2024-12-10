@@ -99,8 +99,11 @@ namespace SWD.SportShirtShop.Services.Service
 
                 string status = "Chờ xác nhận";
                 string paymentStatus = "Chưa thanh toán";
-                var idAccount = _unitOfWork.Account.GetById(request.IdAccount.Value);
-                if (idAccount == null) { request.IdAccount = null; }
+                if (request.IdAccount != null) {
+                    var idAccount = _unitOfWork.Account.GetById(request.IdAccount.Value);
+                    if (idAccount == null) { request.IdAccount = null; }
+                }
+                
 
                 foreach (var item in request.Items)
                 {

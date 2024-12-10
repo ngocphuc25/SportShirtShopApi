@@ -19,7 +19,6 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Order
 
         public string Note { get; set; }
 
-        public string Status { get; set; }
 
         public int? IdAccount { get; set; }
 

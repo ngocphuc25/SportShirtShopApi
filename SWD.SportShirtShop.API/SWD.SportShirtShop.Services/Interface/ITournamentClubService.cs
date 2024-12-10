@@ -18,5 +18,6 @@ namespace SWD.SportShirtShop.Services.Interface
         Task<IBusinessResult> UpdateTournarmentClub(TournamentClubUpdateRequest tournamentClubUpdateRequest);
         Task<IBusinessResult> Save(Club club);
         Task<IBusinessResult> DeleteById(int id);
+        Task<IBusinessResult> GetListTournamentClub();
     }
 }

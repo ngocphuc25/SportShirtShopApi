@@ -26,7 +26,7 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Shirt
 
         public int? CreateAccount { get; set; }
 
-
+        public List<ListImage> links { get; set; }
         
     }
 }

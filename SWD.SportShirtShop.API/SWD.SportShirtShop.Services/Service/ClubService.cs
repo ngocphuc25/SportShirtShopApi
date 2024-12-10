@@ -9,7 +9,7 @@ using System.Security.Claims;
 
 namespace SWD.SportShirtShop.Services.Service
 {
-    public class ClubService 
+    public class ClubService :IClubService
     {
         private readonly UnitOfWork _unitOfWork;
         public ClubService(UnitOfWork unitOfWork) {_unitOfWork = unitOfWork;}
@@ -74,6 +74,13 @@ namespace SWD.SportShirtShop.Services.Service
             try
             {
                 int result = -1;
+                if (clubCreateRequest.CreateAccount != null)
+                {
+                    var account = _unitOfWork.Account.GetById(clubCreateRequest.CreateAccount.Value);
+                    if (account == null) { clubCreateRequest.CreateAccount = null; }
+                }
+
+
 
                 Club newClub = new Club
                 {

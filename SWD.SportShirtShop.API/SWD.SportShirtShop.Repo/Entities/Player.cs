@@ -2,7 +2,6 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace SWD.SportShirtShop.Repo.Entities;
 
@@ -14,7 +13,7 @@ public partial class Player
 
     public string Name { get; set; }
 
-    public DateOnly? Dob { get; set; }
+    public DateTime? Dob { get; set; }
 
     public string Note { get; set; }
 
@@ -23,8 +22,8 @@ public partial class Player
     public DateTime? CreateDate { get; set; }
 
     public int? CreateAccount { get; set; }
-    [JsonIgnore]
+
     public virtual Club IdClubNavigation { get; set; }
-    [JsonIgnore]
+
     public virtual ICollection<PlayerInTournamentClub> PlayerInTournamentClubs { get; set; } = new List<PlayerInTournamentClub>();
 }

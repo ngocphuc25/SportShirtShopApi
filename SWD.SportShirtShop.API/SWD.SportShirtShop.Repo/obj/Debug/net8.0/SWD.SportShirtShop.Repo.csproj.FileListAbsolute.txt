@@ -13,3 +13,6 @@ D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtSh
 D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.pdb
 D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.SportShirtShop.Repo.genruntimeconfig.cache
 D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\ref\SWD.SportShirtShop.Repo.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\bin\Debug\net8.0\SWD.SportShirtShop.Common.dll
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\bin\Debug\net8.0\SWD.SportShirtShop.Common.pdb
+D:\KY 8\SportShirtShop\SportShirtShopApi\SWD.SportShirtShop.API\SWD.SportShirtShop.Repo\obj\Debug\net8.0\SWD.Spor.B2C6D99B.Up2Date

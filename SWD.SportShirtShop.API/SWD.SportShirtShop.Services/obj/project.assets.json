@@ -3658,7 +3658,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.Extensions.Configuration": "9.0.0",
-          "Microsoft.Extensions.Configuration.Json": "9.0.0"
+          "Microsoft.Extensions.Configuration.Json": "9.0.0",
+          "SWD.SportShirtShop.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SWD.SportShirtShop.Repo.dll": {}

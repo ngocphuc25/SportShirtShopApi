@@ -181,7 +181,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Common\\SWD.SportShirtShop.Common.csproj": {
+                "projectPath": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Common\\SWD.SportShirtShop.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

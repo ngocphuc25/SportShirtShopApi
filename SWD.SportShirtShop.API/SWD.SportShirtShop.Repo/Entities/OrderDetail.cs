@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace SWD.SportShirtShop.Repo.Entities;
 
@@ -26,8 +27,8 @@ public partial class OrderDetail
     public DateTime? UpdateDate { get; set; }
 
     public decimal? SalePrice { get; set; }
-
+    [JsonIgnore]
     public virtual Order IdOrdersNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual Shirt IdShirtNavigation { get; set; }
 }

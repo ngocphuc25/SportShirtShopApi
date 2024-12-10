@@ -14,13 +14,11 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Player
 
         public string Name { get; set; }
 
-        public DateOnly? Dob { get; set; }
+        public DateTime Dob { get; set; }
 
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         public string Code { get; set; }
-        public DateTime? CreateDate { get; set; }
-
         public int? CreateAccount { get; set; }
     }
 }

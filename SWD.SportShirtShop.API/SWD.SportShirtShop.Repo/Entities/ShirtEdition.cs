@@ -16,7 +16,7 @@ public partial class ShirtEdition
 
     public string Status { get; set; }
 
-    public string Note { get; set; }
+    public string? Note { get; set; }
 
     public string Code { get; set; }
 
@@ -25,6 +25,6 @@ public partial class ShirtEdition
     public int? CreateAccount { get; set; }
     [JsonIgnore]
     public virtual Tournament IdTournamentNavigation { get; set; }
-    [JsonIgnore]
+
     public virtual ICollection<Shirt> Shirts { get; set; } = new List<Shirt>();
 }
