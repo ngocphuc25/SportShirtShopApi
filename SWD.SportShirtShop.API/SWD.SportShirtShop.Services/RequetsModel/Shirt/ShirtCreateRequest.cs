@@ -11,7 +11,7 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Shirt
         public int? IdShirtEdition { get; set; }
 
         public int? IdPlayerinTournamentClub { get; set; }
-
+        public decimal? SalePrice { get; set; }
         public string Name { get; set; }
 
         public decimal? Price { get; set; }
