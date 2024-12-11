@@ -30,6 +30,19 @@ namespace SWD.SportShirtShop.Services.Service
                 return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
         }
+
+        public async Task<IBusinessResult> GetShirtList()
+        {
+            var categories = await _unitOfWork.Shirt.GetShirtList();
+            if (categories != null)
+            {
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);
+            }
+            else
+            {
+                return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
+            }
+        }
         public async Task<IBusinessResult> GetAllShirtsWithImagesAsync()
         {
             var categories = await _unitOfWork.Shirt.GetAllShirtsWithImagesAsync();

@@ -16,5 +16,6 @@ namespace SWD.SportShirtShop.Services.Interface
         Task<IBusinessResult> DeleteById(int id);
         Task<IBusinessResult> Update(ShirtUpdateRequest request);
         Task<IBusinessResult> GetAllShirtsWithImagesAsync();
+        Task<IBusinessResult> GetShirtList();
     }
 }

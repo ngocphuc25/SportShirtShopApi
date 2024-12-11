@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SWD.SportShirtShop.Repo.Base;
 using SWD.SportShirtShop.Repo.Entities;
-using SWD.SportShirtShop.Common.ResponseModel.TournamentClub;
-
-
+using SWD.SportShirtShop.Repo.ResponseModel.TournamentClub;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +35,7 @@ namespace SWD.SportShirtShop.Repo.Repositories
                     CreateDate = tc.CreateDate,
                     TournamentName = tc.IdTournamentNavigation.Name,
                     ClubName = tc.IdClubNavigation.Name,
+                    
                    // Assuming proper navigation
                 })
                 .ToListAsync();

@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SWD.SportShirtShop.Repo.Base;
 using SWD.SportShirtShop.Repo.Entities;
+using SWD.SportShirtShop.Repo.ResponseModel.Shirt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SWD.SportShirtShop.Common.ResponseModel.Shirt;
-using SWD.SportShirtShop.Common.ResponseModel.TournamentClub;
+
 namespace SWD.SportShirtShop.Repo.Repositories
 {
     public class ShirtRepository :GenericRepository<Shirt>
@@ -44,16 +44,17 @@ namespace SWD.SportShirtShop.Repo.Repositories
                 {
                     Id = tc.Id,
                     IdPlayerinTournamentClub = tc.IdPlayerinTournamentClub,
-                    IdPlayer = tc.IdPlayerinTournamentClubNavigation.IdPlayer,
+                    IdPlayer = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.IdPlayer : null,
                     IdShirtEdition = tc.IdShirtEdition,
                     Name= tc.Name,
                     Price = tc.Price,
                     SalePrice = tc.SalePrice,
-                    ClubName = tc.IdPlayerinTournamentClubNavigation.ClubName,
-                    PlayerName=tc.IdPlayerinTournamentClubNavigation.PlayerName,
-                    Number=tc.IdPlayerinTournamentClubNavigation.Number,
-                    SeasonName=tc.IdPlayerinTournamentClubNavigation.SeasonName,
-                    Status=tc.Status,
+                    ClubName = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.ClubName : null,
+                    PlayerName = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.PlayerName : null,
+                    Number = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.Number : 0, // Default to 0
+                    SeasonName = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.SeasonName : null,
+                    Status =tc.Status,
+                    Images = tc.Images,
                     // Assuming proper navigation
                 })
                 .ToListAsync();

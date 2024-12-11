@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWD.SportShirtShop.Common.ResponseModel.TournamentClub
+namespace SWD.SportShirtShop.Repo.ResponseModel.TournamentClub
 {
     public class TournamentClubListResponse
     {
