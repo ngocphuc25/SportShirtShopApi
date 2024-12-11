@@ -26,7 +26,7 @@ namespace SWD.SportShirtShop.Repo.ResponseModel.Shirt
 
         public int? IdPlayer { get; set; }
 
-        public int Number { get; set; }
+        public int? Number { get; set; }
 
         public string PlayerName { get; set; }
 

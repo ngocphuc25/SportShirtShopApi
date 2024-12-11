@@ -2,7 +2,6 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace SWD.SportShirtShop.Repo.Entities;
 
@@ -13,6 +12,6 @@ public partial class Image
     public string Link { get; set; }
 
     public int? IdShirt { get; set; }
-    [JsonIgnore]
+
     public virtual Shirt IdShirtNavigation { get; set; }
 }

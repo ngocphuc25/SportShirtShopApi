@@ -53,7 +53,7 @@ CREATE TABLE Player (
     id_Club INT  null,
     name NVARCHAR(50),
     dob DATETIME,
-    note NVARCHAR(50) null,
+    note NVARCHAR(100) null,
     code NVARCHAR(50),
     createDate DATETIME,
     createAccount INT,
@@ -84,17 +84,7 @@ CREATE TABLE Tournament (
     createAccount INT
 );
 
-CREATE TABLE ShirtEdition (
-    id INT IDENTITY(1,1) PRIMARY KEY,
-    id_Tournament INT,
-    nameseason NVARCHAR(MAX),
-    status NVARCHAR(MAX),
-    note NVARCHAR(MAX) null,
-    code NVARCHAR(MAX),
-    createDate DATETIME,
-    createAccount INT,
-    FOREIGN KEY (id_Tournament) REFERENCES Tournament(id)
-);
+
 
 CREATE TABLE TournamentClub (
     id INT IDENTITY(1,1) PRIMARY KEY,
@@ -106,6 +96,21 @@ CREATE TABLE TournamentClub (
     FOREIGN KEY (id_Club) REFERENCES Club(id)
 );
 
+
+CREATE TABLE ShirtEdition (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    id_TournamentClub INT,
+    nameseason NVARCHAR(MAX),
+	color NVARCHAR(MAX),
+	Material NVARCHAR(MAX),
+	versionForMatch NVARCHAR(MAX),
+    status NVARCHAR(MAX),
+    note NVARCHAR(MAX) null,
+    code NVARCHAR(MAX),
+    createDate DATETIME,
+    createAccount INT,
+    FOREIGN KEY (id_TournamentClub) REFERENCES TournamentClub(id)
+);
 CREATE TABLE PlayerInTournamentClub (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_TournamentClub INT,
@@ -122,7 +127,7 @@ CREATE TABLE PlayerInTournamentClub (
 CREATE TABLE Shirt (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_shirtEdition INT  ,
-    id_PlayerinTournamentClub INT ,
+    id_PlayerinTournamentClub INT null,
     name NVARCHAR(MAX),
     price DECIMAL(18, 2),
 	salePrice Decimal(18,2) null,
@@ -193,7 +198,8 @@ VALUES
 	(5, 'Cristiano Ronaldo', '1985-02-05', 'Forward, Captain', 'CR7', GETDATE(), 1),
 	(6, 'Lionel Messi', '1987-06-24', 'Forward, Playmaker', 'M10', GETDATE(), 1),
 	 (4, 'Thiago Silva', '1984-09-22', 'Defender, Experienced Leader', 'CHE001', GETDATE(), 1),
-    (4, N'Golo Kante', '1991-03-29', 'Midfielder, Playmaker' , 'CHE002', GETDATE(), 1);
+    (4, N'Golo Kante', '1991-03-29', 'Midfielder, Playmaker' , 'CHE002', GETDATE(), 1),
+	(4, 'Mason Mount', '1999-01-10',  'English midfielder','CHE001', GETDATE(), 1);
 
 	
 INSERT INTO TournamentClub (id_Tournament, id_Club, createDate, createAccount)
@@ -209,12 +215,24 @@ VALUES
 
 INSERT INTO PlayerInTournamentClub (id_TournamentClub, id_Player, Number, PlayerName, SeasonName, ClubName, Description)
 VALUES
- (1, 1, 10, 'Marcus Rashford', '2023-24 Premier League', 'Manchester United', 'Forward, Star Player'),
-  (2, 1, 10, 'Marcus Rashford', '2022–23 Premier League', 'Manchester United', 'Forward, Star Player'),
+	(1, 1, 10, 'Marcus Rashford', '2023-24 Premier League', 'Manchester United', 'Forward, Star Player'),
+	(2, 1, 10, 'Marcus Rashford', '2022–23 Premier League', 'Manchester United', 'Forward, Star Player'),
     (1, 2, 8, 'Bruno Fernandes', '2023-24 Premier League', 'Manchester United', 'Midfielder, Playmaker'),
     (2, 4, 7, 'Cristiano Ronaldo', '2023-24 Saudi Professional League', 'Al-Nassr', 'Forward, Captain'),
     (3, 5, 10, 'Lionel Messi', '2023-24 Major League Soccer', 'Paris Saint-Germain', 'Forward, Playmaker'),
-    (4, 7, 24, 'Reece James', '2023/2024', 'Chelsea', 'Defender, Captain'),
-    (4, 8, 19, 'Mason Mount', '2022–23 Premier League', 'Chelsea', 'Midfielder'),
-    (4, 9, 6, 'Thiago Silva', '2023/2024', 'Chelsea', 'Defender, Experienced Leader');
+    (5, 8, 19, 'Mason Mount', '2022–23 Premier League', 'Chelsea', 'Midfielder'),
+    (4, 6, 6, 'Thiago Silva', '2023/2024', 'Chelsea', 'Defender, Experienced Leader');
  
+
+ INSERT INTO ShirtEdition ( id_TournamentClub, nameseason,  color, Material,  versionForMatch,   status, note,  code,  createDate,  createAccount)
+VALUES 
+(    1, '2023-24 Premier League','Red','Guest edition',  'Cotton','Active', 'Limited edition for the 2023/24 season', 'R001',    GETDATE(), 1 ),
+(    1, '2023-24 Premier League','Black', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 ),
+(    1, '2023-24 Premier League','Black', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R003',    GETDATE(), 1 )
+
+INSERT INTO Shirt (
+    id_shirtEdition,    id_PlayerinTournamentClub,    name,  price, salePrice,    totalSold,description,   quantity_stock,    status,   code,  createDate,  createAccount,    updatedDate
+)
+VALUES 
+
+(   1,  10,'Mason Mount 2024 Jersey',1000, 5000, 0,'Limited edition shirt for the 2024 season featuring Mason Mount',100, 'Active','CHELSEA00019',GETDATE(), 1,     GETDATE())
