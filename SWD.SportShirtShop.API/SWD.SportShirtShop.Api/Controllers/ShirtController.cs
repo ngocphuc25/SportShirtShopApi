@@ -23,7 +23,11 @@ namespace SWD.SportShirtShop.Api.Controllers
         {
             return await _shirtService.GetAll();
         }
-
+        [HttpGet("list")]
+        public async Task<IBusinessResult> GetShirtList()
+        {
+            return await _shirtService.GetShirtList();
+        }
         // GET api/<ShirtEditionController>/5
         [HttpGet("{id}")]
         public async Task<IBusinessResult> GetByID(int id)

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SWD.SportShirtShop.Repo;
+using SWD.SportShirtShop.Repo.Entities;
 
-namespace SWD.SportShirtShop.Common.ResponseModel.Shirt
+namespace SWD.SportShirtShop.Repo.ResponseModel.Shirt
 {
     public class ShirtList
     {
@@ -22,7 +24,7 @@ namespace SWD.SportShirtShop.Common.ResponseModel.Shirt
         public string Status { get; set; }
 
 
-        public int IdPlayer { get; set; }
+        public int? IdPlayer { get; set; }
 
         public int Number { get; set; }
 
@@ -32,6 +34,6 @@ namespace SWD.SportShirtShop.Common.ResponseModel.Shirt
 
         public string ClubName { get; set; }
 
-
+        public virtual ICollection<Image> Images { get; set; } = new List<Image>();
     }
 }
