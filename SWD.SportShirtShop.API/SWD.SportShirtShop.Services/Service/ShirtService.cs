@@ -109,9 +109,9 @@ namespace SWD.SportShirtShop.Services.Service
 
                 var idPlayer= _unitOfWork.PlayerInTournamentClub.GetById(request.IdPlayerinTournamentClub.Value);
                 var idAccount = _unitOfWork.Account.GetById(request.CreateAccount.Value);
-                var idShirtEdition = _unitOfWork.ShirtEdition.GetById(request.IdShirtEdition.Value);
+                var idShirtEdition = _unitOfWork.ShirtEdition.GetById(request.IdShirtEdition);
                 //var playerIntournament = _unitOfWork.Tournament.GetById(request.IdPlayerinTournamentClub.Value);
-                if (idShirtEdition == null) { request.IdShirtEdition = null; }
+                if (idShirtEdition == null) { throw new InvalidOperationException("Not found id shirtedition !!!"); ; }
                 if (idAccount == null) { request.CreateAccount = null; }
                 if (idPlayer == null) { request.IdPlayerinTournamentClub = null; }
                 

@@ -8,7 +8,7 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Shirt
 {
     public class ShirtCreateRequest
     {
-        public int? IdShirtEdition { get; set; }
+        public int IdShirtEdition { get; set; }
 
         public int? IdPlayerinTournamentClub { get; set; }
         public decimal? SalePrice { get; set; }

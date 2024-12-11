@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace SWD.SportShirtShop.Repo.Entities;
 
@@ -34,8 +35,8 @@ public partial class Order
     public DateTime? CreateDate { get; set; }
 
     public virtual Account IdAccountNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-
+    [JsonIgnore]
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 }

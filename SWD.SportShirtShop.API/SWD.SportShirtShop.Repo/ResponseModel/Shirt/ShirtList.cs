@@ -12,7 +12,7 @@ namespace SWD.SportShirtShop.Repo.ResponseModel.Shirt
     {
         public int Id { get; set; }
 
-        public int? IdShirtEdition { get; set; }
+        public int IdShirtEdition { get; set; }
 
         public int? IdPlayerinTournamentClub { get; set; }
 

@@ -49,6 +49,7 @@ namespace SWD.SportShirtShop.Services.Extension
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<ITournamentClubService, TournamentClubService>();
             services.AddScoped<IImageService, ImageService>();
+            services.AddScoped<IPlayerInTournamentClubService, PlayerInTournamentClubService>();
             // services.AddScoped<IEmailService,EmailService>();
 
             //services.AddScoped<IReviewService, ReviewService>();
