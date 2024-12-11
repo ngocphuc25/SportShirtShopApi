@@ -171,9 +171,9 @@ CREATE TABLE Image (
 
 INSERT INTO Account (username, email, password, Role, Status, Name, Dob, gender, phone)
 VALUES 
-('admin_user', 'admin@example.com', 'hashed_admin_password', 'ADMIN', 'Active', 'Admin Name', '1985-01-01', 'Male', '1234567890'),
-('staff_user1', 'staff1@example.com', 'hashed_staff_password1', 'STAFF', 'Active', 'Staff One', '1990-05-10', 'Female', '0987654321'),
-('staff_user1', 'staff2@example.com', 'hashed_staff_password2', 'STAFF', 'Active', 'Staff Two', '1992-08-15', 'Male', '1122334455');
+('admin_user', 'admin@example.com', 'hashed_admin_password', 'ADMIN', 'ACTIVE', 'Admin Name', '1985-01-01', 'Male', '1234567890'),
+('staff_user1', 'staff1@example.com', 'hashed_staff_password1', 'STAFF', 'ACTIVE', 'Staff One', '1990-05-10', 'Female', '0987654321'),
+('staff_user1', 'staff2@example.com', 'hashed_staff_password2', 'STAFF', 'ACTIVE', 'Staff Two', '1992-08-15', 'Male', '1122334455');
 
 INSERT INTO Club (Name, Logo, Status, Note, Code, CreateDate, CreateAccount)
 VALUES 
@@ -199,7 +199,7 @@ VALUES
 	(6, 'Lionel Messi', '1987-06-24', 'Forward, Playmaker', 'M10', GETDATE(), 1),
 	 (4, 'Thiago Silva', '1984-09-22', 'Defender, Experienced Leader', 'CHE001', GETDATE(), 1),
     (4, N'Golo Kante', '1991-03-29', 'Midfielder, Playmaker' , 'CHE002', GETDATE(), 1),
-	(4, 'Mason Mount', '1999-01-10',  'English midfielder','CHE001', GETDATE(), 1);
+	(1, 'Mason Mount', '1999-01-10',  'English midfielder','CHE001', GETDATE(), 1);
 
 	
 INSERT INTO TournamentClub (id_Tournament, id_Club, createDate, createAccount)
@@ -226,13 +226,25 @@ VALUES
 
  INSERT INTO ShirtEdition ( id_TournamentClub, nameseason,  color, Material,  versionForMatch,   status, note,  code,  createDate,  createAccount)
 VALUES 
-(    1, '2023-24 Premier League','Red','Guest edition',  'Cotton','Active', 'Limited edition for the 2023/24 season', 'R001',    GETDATE(), 1 ),
-(    1, '2023-24 Premier League','Black', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 ),
-(    1, '2023-24 Premier League','Black', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R003',    GETDATE(), 1 )
+(    3, '2023-24 Premier League','Blue','Away edition',  'Cotton','Active', 'Limited edition for the 2023/24 season', 'R001',    GETDATE(), 1 ),
+(    1, '2023-24 Premier League','Red', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 ),
+(    1, '2023-24 Premier League','Blue', 'Away edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R003',    GETDATE(), 1 ),
+(    1, '2023-24 Premier League','White', 'Third edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 );
 
-INSERT INTO Shirt (
-    id_shirtEdition,    id_PlayerinTournamentClub,    name,  price, salePrice,    totalSold,description,   quantity_stock,    status,   code,  createDate,  createAccount,    updatedDate
-)
+
+INSERT INTO Shirt (id_shirtEdition, id_PlayerinTournamentClub, name,price, salePrice, totalSold,description, quantity_stock, status,code,createDate,createAccount, updatedDate)
 VALUES 
 
-(   1,  10,'Mason Mount 2024 Jersey',1000, 5000, 0,'Limited edition shirt for the 2024 season featuring Mason Mount',100, 'Active','CHELSEA00019',GETDATE(), 1,     GETDATE())
+(   1,  6,'Mason Mount 2024 Jersey',1000, 5000, 0,'Limited edition shirt for the 2024 season featuring Mason Mount',100, 'Active','CHELSEA00019',GETDATE(), 1  ,GETDATE() ),
+(   2,  null,'Manchester United 23/24 Home Jersey',1000, 5000, 0,'Manchester United 23/24 Home Jersey',100, 'Active','MU0001',GETDATE(), 1  ,GETDATE() ),
+(   3,  null,'Manchester United 23/24 Away Jersey',1000, 5000, 0,N'Siêu đẹp luôn',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() ),
+(   4,  null,'Manchester United 23/24 Third Jersey',1000, 5000, 0,'Manchester United 23/24 Third Jersey',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() ),
+(   4,  1,' Marcus Rashford Manchester United 23/24 Third Jersey',1000, 5000, 0,N'Limited',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() );
+
+INSERT INTO Image( link,id_Shirt)
+values
+('https://mufc-live.cdn.scayle.cloud/images/8ed8c14d2c334556c14da1116ba32a50.jpg?brightness=1&width=576&height=768&quality=75&bg=ffffff',2),
+('https://mufc-live.cdn.scayle.cloud/images/6a7bd4cdcefb410b1238669089b40532.png?brightness=1&width=576&height=768&quality=75&bg=ffffff',5),
+('https://mufc-live.cdn.scayle.cloud/images/9d8b1e35abd676645560a4bce2b86dca.jpg?brightness=1&width=1536&height=2048&quality=75&bg=ffffff',4),
+('https://mufc-live.cdn.scayle.cloud/images/e8a92d15e1b75bb7994cb4c7ec3fd30c.jpg?brightness=1&width=576&height=768&quality=75&bg=ffffff',3),
+('https://images.footballfanatics.com/chelsea/mens-nike-mason-mount-blue-chelsea-2021/22-home-vapor-match-authentic-player-jersey_pi4309000_altimages_ff_4309686-3d6a40133a4042442260alt1_full.jpg?_hv=2&w=900',1)

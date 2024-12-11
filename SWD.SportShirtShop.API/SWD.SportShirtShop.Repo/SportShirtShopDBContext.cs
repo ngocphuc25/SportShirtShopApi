@@ -32,7 +32,6 @@ public partial class SportShirtShopDBContext : DbContext
         return configuration["ConnectionStrings:DefaultConnectionString"];
     }
 
-
     public virtual DbSet<Account> Accounts { get; set; }
 
     public virtual DbSet<Club> Clubs { get; set; }
@@ -61,7 +60,7 @@ public partial class SportShirtShopDBContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3213E83FB03D8C21");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3213E83FA0716441");
 
             entity.ToTable("Account");
 
@@ -89,7 +88,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<Club>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Club__3213E83F9BDC2031");
+            entity.HasKey(e => e.Id).HasName("PK__Club__3213E83F27A51DD9");
 
             entity.ToTable("Club");
 
@@ -111,7 +110,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<Image>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Image__3213E83F31FA5EC5");
+            entity.HasKey(e => e.Id).HasName("PK__Image__3213E83F067AE5EC");
 
             entity.ToTable("Image");
 
@@ -126,7 +125,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Orders__3213E83F5B1B262B");
+            entity.HasKey(e => e.Id).HasName("PK__Orders__3213E83F6F6A69CB");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Code).HasColumnName("code");
@@ -165,7 +164,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__OrderDet__3213E83F5BFADC04");
+            entity.HasKey(e => e.Id).HasName("PK__OrderDet__3213E83F225A8ED0");
 
             entity.ToTable("OrderDetail");
 
@@ -203,7 +202,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<Payment>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Payment__3213E83FC1939FB0");
+            entity.HasKey(e => e.Id).HasName("PK__Payment__3213E83FF524680E");
 
             entity.ToTable("Payment");
 
@@ -228,7 +227,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<Player>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Player__3213E83FD7CEC90B");
+            entity.HasKey(e => e.Id).HasName("PK__Player__3213E83F625C6ADB");
 
             entity.ToTable("Player");
 
@@ -248,7 +247,7 @@ public partial class SportShirtShopDBContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("name");
             entity.Property(e => e.Note)
-                .HasMaxLength(50)
+                .HasMaxLength(100)
                 .HasColumnName("note");
 
             entity.HasOne(d => d.IdClubNavigation).WithMany(p => p.Players)
@@ -258,7 +257,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<PlayerInTournamentClub>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__PlayerIn__3213E83F5D4F5737");
+            entity.HasKey(e => e.Id).HasName("PK__PlayerIn__3213E83F563241B5");
 
             entity.ToTable("PlayerInTournamentClub");
 
@@ -277,7 +276,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<Shirt>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Shirt__3213E83FA3B3056E");
+            entity.HasKey(e => e.Id).HasName("PK__Shirt__3213E83F46C0C069");
 
             entity.ToTable("Shirt");
 
@@ -319,29 +318,31 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<ShirtEdition>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__ShirtEdi__3213E83FB619B0CE");
+            entity.HasKey(e => e.Id).HasName("PK__ShirtEdi__3213E83F0B544A74");
 
             entity.ToTable("ShirtEdition");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Code).HasColumnName("code");
+            entity.Property(e => e.Color).HasColumnName("color");
             entity.Property(e => e.CreateAccount).HasColumnName("createAccount");
             entity.Property(e => e.CreateDate)
                 .HasColumnType("datetime")
                 .HasColumnName("createDate");
-            entity.Property(e => e.IdTournament).HasColumnName("id_Tournament");
+            entity.Property(e => e.IdTournamentClub).HasColumnName("id_TournamentClub");
             entity.Property(e => e.Nameseason).HasColumnName("nameseason");
             entity.Property(e => e.Note).HasColumnName("note");
             entity.Property(e => e.Status).HasColumnName("status");
+            entity.Property(e => e.VersionForMatch).HasColumnName("versionForMatch");
 
-            entity.HasOne(d => d.IdTournamentNavigation).WithMany(p => p.ShirtEditions)
-                .HasForeignKey(d => d.IdTournament)
-                .HasConstraintName("FK__ShirtEdit__id_To__32E0915F");
+            entity.HasOne(d => d.IdTournamentClubNavigation).WithMany(p => p.ShirtEditions)
+                .HasForeignKey(d => d.IdTournamentClub)
+                .HasConstraintName("FK__ShirtEdit__id_To__36B12243");
         });
 
         modelBuilder.Entity<Tournament>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Tourname__3213E83FF1215EBA");
+            entity.HasKey(e => e.Id).HasName("PK__Tourname__3213E83F325FC900");
 
             entity.ToTable("Tournament");
 
@@ -365,7 +366,7 @@ public partial class SportShirtShopDBContext : DbContext
 
         modelBuilder.Entity<TournamentClub>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Tourname__3213E83F2CDD6FCF");
+            entity.HasKey(e => e.Id).HasName("PK__Tourname__3213E83FAF1B194F");
 
             entity.ToTable("TournamentClub");
 
@@ -379,11 +380,11 @@ public partial class SportShirtShopDBContext : DbContext
 
             entity.HasOne(d => d.IdClubNavigation).WithMany(p => p.TournamentClubs)
                 .HasForeignKey(d => d.IdClub)
-                .HasConstraintName("FK__Tournamen__id_Cl__36B12243");
+                .HasConstraintName("FK__Tournamen__id_Cl__33D4B598");
 
             entity.HasOne(d => d.IdTournamentNavigation).WithMany(p => p.TournamentClubs)
                 .HasForeignKey(d => d.IdTournament)
-                .HasConstraintName("FK__Tournamen__id_To__35BCFE0A");
+                .HasConstraintName("FK__Tournamen__id_To__32E0915F");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -49,11 +49,11 @@ namespace SWD.SportShirtShop.Repo.Repositories
                     Name= tc.Name,
                     Price = tc.Price,
                     SalePrice = tc.SalePrice,
-                    ClubName = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.ClubName : null,
+                    ClubName = tc.IdShirtEditionNavigation.IdTournamentClubNavigation.IdClubNavigation.Name ,
                     PlayerName = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.PlayerName : null,
                     Number = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.Number : 0, // Default to 0
-                    SeasonName = tc.IdPlayerinTournamentClubNavigation != null ? tc.IdPlayerinTournamentClubNavigation.SeasonName : null,
-                    Status =tc.Status,
+                    SeasonName = tc.IdShirtEditionNavigation.Nameseason,
+                    Status =tc.Status,  
                     Images = tc.Images,
                     // Assuming proper navigation
                 })

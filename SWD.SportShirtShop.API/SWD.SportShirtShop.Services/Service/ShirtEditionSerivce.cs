@@ -102,7 +102,7 @@ namespace SWD.SportShirtShop.Services.Service
                     ShirtEdition newClub = new ShirtEdition
                     {
                       
-                        IdTournament = request.IdTournament,
+                        IdTournamentClub = request.IdTournament,
                         Status = request.Status,
                         Note = request.Note,
                         Code = request.Code,
