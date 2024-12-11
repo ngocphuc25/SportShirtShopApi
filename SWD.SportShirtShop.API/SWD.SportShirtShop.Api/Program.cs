@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerUI;
 using SWD.SportShirtShop.Repo;
 using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Extension;
@@ -117,14 +118,7 @@ var app = builder.Build();
 var serectKey = builder.Configuration["Jwt:Serect"];
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-    });
-}
+
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
@@ -132,4 +126,21 @@ app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
 app.MapControllers();
 
+app.UseSwagger();
+app.UseSwaggerUI(
+    options =>
+    {
+        options.RoutePrefix = "swagger";
+        options.OAuthAppName("API");
+        options.DisplayRequestDuration();
+        options.EnableTryItOutByDefault();
+        options.DocExpansion(DocExpansion.List);
+        options.DisplayOperationId();
+        options.DefaultModelsExpandDepth(-1);
+        options.EnableFilter(string.Empty);
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+        options.OAuthScopeSeparator(" ");
+        options.DocExpansion(DocExpansion.None);
+
+    });
 app.Run();
