@@ -1,10 +1,12 @@
-﻿using SWD.SportShirtShop.Common;
+﻿using Microsoft.AspNetCore.Mvc;
+using SWD.SportShirtShop.Common;
 using SWD.SportShirtShop.Repo;
 using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.Club;
 using SWD.SportShirtShop.Services.RequetsModel.Player;
+using SWD.SportShirtShop.Services.RequetsModel.Tournament;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,6 +80,17 @@ namespace SWD.SportShirtShop.Services.Service
         {
             try
             {
+                if (playerCreateRequest.CreateAccount != null)
+                {
+                    var account = _unitOfWork.Account.GetById(playerCreateRequest.CreateAccount.Value);
+                    if (account == null) { playerCreateRequest.CreateAccount = null; }
+                }
+                if (playerCreateRequest.IdClub != null)
+                {
+                    var club = _unitOfWork.Club.GetById(playerCreateRequest.IdClub.Value);
+                    if (club == null)
+                        return  new BusinessResult(Const.FAIL_CREATE_CODE, "Không tìm thấy id club");
+                }
                 int result = -1;
 
                 Player newPlayer = new Player
@@ -117,6 +130,12 @@ namespace SWD.SportShirtShop.Services.Service
                 var player = _unitOfWork.Player.GetById(playerUpdateRequets.Id);
                 if (player != null)
                 {
+                    if (playerUpdateRequets.IdClub != null)
+                    {
+                        var club = _unitOfWork.Club.GetById(playerUpdateRequets.IdClub.Value);
+                        if (club == null)
+                            return new BusinessResult(Const.FAIL_CREATE_CODE, "Không tìm thấy id club");
+                    }
                     _unitOfWork.Player.Context().Entry(player).CurrentValues.SetValues(player);
                     result = await _unitOfWork.Player.UpdateAsync(player);
                     if (result > 0)

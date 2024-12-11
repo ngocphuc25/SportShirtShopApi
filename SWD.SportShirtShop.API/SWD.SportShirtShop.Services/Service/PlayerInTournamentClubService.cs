@@ -77,22 +77,36 @@ namespace SWD.SportShirtShop.Services.Service
 
         }
 
-        public async Task<IBusinessResult> CreatePlayerInTournamentClub(PlayerInTournamentClubCreateRequest playerInTournamentClubCreateRequest)
+        public async Task<IBusinessResult> CreatePlayerInTournamentClub(PlayerInTournamentClubCreateRequest request)
         {
             try
             {
                 int result = -1;
+                var existTournamentClub = await _unitOfWork.TournamentClub.GetByIdAsync(request.IdTournamentClub);
+                if (existTournamentClub == null)
+                {
+                    throw new InvalidOperationException("Not found id tournament-club !!!"); 
+                }
+               
 
+                var player = await _unitOfWork.Player.GetByIdAsync(request.IdPlayer);
+                if (player == null)
+                {
+                    throw new InvalidOperationException("Not found id player !!!");
+                }
+
+                var club=await _unitOfWork.Club.GetByIdAsync(existTournamentClub.IdClub.Value);
+                var tournament= await _unitOfWork.Tournament.GetByIdAsync(existTournamentClub.IdTournament.Value);
                 PlayerInTournamentClub newItem = new PlayerInTournamentClub
                 {
-                    Id = playerInTournamentClubCreateRequest.Id,
-                    IdPlayer = playerInTournamentClubCreateRequest.IdPlayer,
-                    IdTournamentClub = playerInTournamentClubCreateRequest.IdTournamentClub,
-                    Number = playerInTournamentClubCreateRequest.Number,
-                    PlayerName = playerInTournamentClubCreateRequest?.PlayerName,
-                    SeasonName = playerInTournamentClubCreateRequest?.SeasonName,
-                    ClubName = playerInTournamentClubCreateRequest?.ClubName,
-                    Description = playerInTournamentClubCreateRequest.Description
+              
+                    IdPlayer = request.IdPlayer,
+                    IdTournamentClub = request.IdTournamentClub,
+                    Number = request.Number,
+                    PlayerName =player.Name,
+                    SeasonName = tournament.Name,
+                    ClubName = club.Name,
+                    Description = request.Description
                 };
 
 
@@ -112,9 +126,35 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public Task<IBusinessResult> DeleteById(int id)
+        public async Task<IBusinessResult> DeleteById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var account = await _unitOfWork.PlayerInTournamentClub.GetByIdAsync(id);
+                if (account == null)
+                {
+                    return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
+                }
+                else
+                {
+                    int result = -1;
+                     // account.Status = "Deleted";
+                    result = await _unitOfWork.PlayerInTournamentClub.UpdateAsync(account);
+                    if (result > 0)
+                    {
+                        return new BusinessResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, account);
+                    }
+                    else
+                    {
+                        return new BusinessResult(Const.FAIL_DELETE_CODE, Const.FAIL_DELETE_MSG, account);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return new BusinessResult(Const.ERROR_EXCEPTION, ex.ToString());
+            }
         }
 
     }

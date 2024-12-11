@@ -30,6 +30,18 @@ namespace SWD.SportShirtShop.Services.Service
                 return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
         }
+        public async Task<IBusinessResult> GetAllShirtsWithImagesAsync()
+        {
+            var categories = await _unitOfWork.Shirt.GetAllShirtsWithImagesAsync();
+            if (categories != null)
+            {
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);
+            }
+            else
+            {
+                return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
+            }
+        }
 
         public async Task<IBusinessResult> GetById(int id)
         {
@@ -114,7 +126,15 @@ namespace SWD.SportShirtShop.Services.Service
                     SalePrice= request.SalePrice,
                     
                 };
-
+                foreach (var url in request.links)
+                {
+                    var image = new Image
+                    {
+                       Link=url.link
+                                     // Liên kết với Shirt
+                    };
+                    newClub.Images.Add(image);
+                }
 
                 result = await _unitOfWork.Shirt.CreateAsync(newClub);
                 if (result > 0)

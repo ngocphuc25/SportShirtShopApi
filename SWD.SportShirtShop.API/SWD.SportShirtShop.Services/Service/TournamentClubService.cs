@@ -1,10 +1,13 @@
-﻿using SWD.SportShirtShop.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using SWD.SportShirtShop.Common;
 using SWD.SportShirtShop.Repo;
 using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.Interface;
+using SWD.SportShirtShop.Services.RequetsModel.Player;
 using SWD.SportShirtShop.Services.RequetsModel.Tournament;
 using SWD.SportShirtShop.Services.RequetsModel.TournamentClub;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +34,18 @@ namespace SWD.SportShirtShop.Services.Service
                 return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
         }
-
+        public async Task<IBusinessResult> GetListTournamentClub()
+        {
+            var item = await _unitOfWork.TournamentClub.GetListTournamentClubAsync();
+            if (item != null)
+            {
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, item);
+            }
+            else
+            {
+                return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
+            }
+        }
         public async Task<IBusinessResult> GetById(int id)
         {
             var item = await _unitOfWork.TournamentClub.GetByIdAsync(id);
@@ -80,18 +94,40 @@ namespace SWD.SportShirtShop.Services.Service
                 return new BusinessResult(Const.ERROR_EXCEPTION, ex.ToString());
             }
         }
-        public async Task<IBusinessResult> CreateTournarmentClub(TournamentClubCreateRequest tournamentClubCreateRequest)
+        public async Task<IBusinessResult> CreateTournarmentClub(TournamentClubCreateRequest request)
         {
             try
             {
                 int result = -1;
+
+
+                if (request.IdClub != null)
+                {
+                    var club = _unitOfWork.Club.GetById(request.IdClub.Value);
+                    if (club == null)
+                        return new BusinessResult(Const.FAIL_CREATE_CODE, "Không tìm thấy id club");
+                }
+                if (request.IdTournament != null)
+                {
+                    var club = _unitOfWork.Club.GetById(request.IdTournament.Value);
+                    if (club == null)
+                        return new BusinessResult(Const.FAIL_CREATE_CODE, "Không tìm thấy id tournament");
+                }
+
+                var existingTournamentClub = await _unitOfWork.TournamentClub.GetTournamentClubExist(request.IdClub.Value,request.IdTournament.Value);
+
+                if (existingTournamentClub != null)
+                {
+                    throw new InvalidOperationException("This tournament club entry already exists.");
+                }
+
                 TournamentClub newTournament = new TournamentClub
                 {
-                    Id = tournamentClubCreateRequest.Id,
-                    IdClub = tournamentClubCreateRequest.IdClub,
-                    IdTournament = tournamentClubCreateRequest.IdTournament,
+                    
+                    IdClub = request.IdClub,
+                    IdTournament = request.IdTournament,
                     CreateDate = DateTime.Now,
-                    CreateAccount = tournamentClubCreateRequest.CreateAccount
+                    CreateAccount = request.CreateAccount
                 };
 
 

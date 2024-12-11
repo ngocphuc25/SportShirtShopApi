@@ -16,7 +16,7 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Club
 
         public string Status { get; set; }
 
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         public string Code { get; set; }
         public DateTime? CreateDate { get; set; }

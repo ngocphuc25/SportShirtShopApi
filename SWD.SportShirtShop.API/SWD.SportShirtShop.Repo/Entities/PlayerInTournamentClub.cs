@@ -10,11 +10,11 @@ public partial class PlayerInTournamentClub
 {
     public int Id { get; set; }
 
-    public int? IdTournamentClub { get; set; }
+    public int IdTournamentClub { get; set; }
 
-    public int? IdPlayer { get; set; }
+    public int IdPlayer { get; set; }
 
-    public int? Number { get; set; }
+    public int Number { get; set; }
 
     public string PlayerName { get; set; }
 
@@ -27,6 +27,6 @@ public partial class PlayerInTournamentClub
     public virtual Player IdPlayerNavigation { get; set; }
     [JsonIgnore]
     public virtual TournamentClub IdTournamentClubNavigation { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Shirt> Shirts { get; set; } = new List<Shirt>();
 }

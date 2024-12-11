@@ -24,6 +24,12 @@ namespace SWD.SportShirtShop.Api.Controllers
             return await _tournamentClubService.GetAll();
         }
 
+        [HttpGet("/list")]
+        public async Task<IBusinessResult> Getlist()
+        {
+            return await _tournamentClubService.GetListTournamentClub();
+        }
+
         // GET api/<TournamentClubController>/5
         [HttpGet("{id}")]
         public async Task<IBusinessResult> Get(int id)

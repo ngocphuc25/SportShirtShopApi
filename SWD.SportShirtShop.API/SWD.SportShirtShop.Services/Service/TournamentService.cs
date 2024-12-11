@@ -116,6 +116,11 @@ namespace SWD.SportShirtShop.Services.Service
         {
             try
             {
+                if (tournamentCreateRequest.CreateAccount != null)
+                {
+                    var account = _unitOfWork.Account.GetById(tournamentCreateRequest.CreateAccount.Value);
+                    if (account == null) { tournamentCreateRequest.CreateAccount = null; }
+                }
                 int result = -1;
                 Tournament newTournament = new Tournament
                 {

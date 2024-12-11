@@ -20,4 +20,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SWD.SportShirtShop.Common\SWD.SportShirtShop.Common.csproj" />
+  </ItemGroup>
+
 </Project>

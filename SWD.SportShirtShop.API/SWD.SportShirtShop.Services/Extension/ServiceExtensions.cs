@@ -37,6 +37,9 @@ namespace SWD.SportShirtShop.Services.Extension
 
             // Register your services here
             services.AddScoped<TokenService>();
+            services.AddScoped<IPlayerService, PlayerService>();
+            services.AddScoped<ITournamentService, TournamentService>();
+            services.AddScoped<IClubService, ClubService>(); 
             services.AddScoped<IShirtEditionSerivice, ShirtEditionSerivce>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IShirtService, ShirtService>();
@@ -44,6 +47,8 @@ namespace SWD.SportShirtShop.Services.Extension
             services.AddScoped<IPayosService, PayosService>();
             services.AddScoped<PayosService> ();
             services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<ITournamentClubService, TournamentClubService>();
+            services.AddScoped<IImageService, ImageService>();
             // services.AddScoped<IEmailService,EmailService>();
 
             //services.AddScoped<IReviewService, ReviewService>();
