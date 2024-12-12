@@ -19,13 +19,13 @@ builder.Services.AddApplicationServices();
 // Register your services here
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-//builder.Services.AddScoped<IClubService, ClubService>();
+builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<ITournamentService, TournamentService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
-//builder.Services.AddScoped<ITournamentClubService, TournamentClubService>();
-//builder.Services.AddScoped<IPlayerInTournamentClubService, PlayerInTournamentClubService>();
-//builder.Services.AddScoped<IImageService, ImageS>();
+builder.Services.AddScoped<ITournamentClubService, TournamentClubService>();
+builder.Services.AddScoped<IPlayerInTournamentClubService, PlayerInTournamentClubService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 
 
@@ -116,20 +116,22 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 var serectKey = builder.Configuration["Jwt:Serect"];
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-    });
-}
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+        c.RoutePrefix = string.Empty;
+    });
+}
 app.MapControllers();
 
 app.Run();
