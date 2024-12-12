@@ -2,11 +2,13 @@
 using SWD.SportShirtShop.Common.Exceptions;
 using SWD.SportShirtShop.Repo;
 using SWD.SportShirtShop.Repo.Entities;
+using SWD.SportShirtShop.Repo.ResponseModel;
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.Order;
 using SWD.SportShirtShop.Services.RequetsModel.Payment;
 using SWD.SportShirtShop.Services.RequetsModel.Shirt;
+using SWD.SportShirtShop.Services.ResponseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -261,5 +263,33 @@ namespace SWD.SportShirtShop.Services.Service
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
+
+        public async Task<IBusinessResult> DashBoardInfo()
+        {
+            DashboardInfo dashBoard = new DashboardInfo();
+            dashBoard.TotalProduct = await _unitOfWork.Shirt.CountProductsByConditionAsync();
+            dashBoard.TotalOrderCompleted = await _unitOfWork.Order.SucessOrder();
+            dashBoard.TotalAmmount = await _unitOfWork.Order.TotalAmmount();
+            if (dashBoard != null)
+            {
+                return new BusinessResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, dashBoard);
+            }
+            else
+            {
+                return new BusinessResult(Const.FAIL_UPDATE_CODE, Const.FAIL_UPDATE_MSG, new DashboardInfo());
+            }
+        }
+
+        public async Task<PaginatedResult<Order>> GetProcessingOrdersAsync(int pageNumber, int pageSize)
+        {
+            var query = await _unitOfWork.Order.GetProcessingOrdersAsync(pageNumber, pageSize);
+
+            PaginatedResult<Order> result = new PaginatedResult<Order> { Data=query.Data,
+            PageNumber=query.PageNumber,PageSize=query.PageSize,TotalRecords=query.TotalRecords};
+            
+            return result;// Chỉ lấy Query từ Repository
+
+        }
+
     }
 }

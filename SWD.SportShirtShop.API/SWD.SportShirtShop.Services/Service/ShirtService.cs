@@ -31,9 +31,12 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<IBusinessResult> GetShirtList()
+        public async Task<IBusinessResult> GetShirtList(string? playerName,
+    string? seasonName ,
+    int? numbe,
+    string? clubName,int pagenumber,int pagesize)
         {
-            var categories = await _unitOfWork.Shirt.GetShirtList();
+            var categories = await _unitOfWork.Shirt.GetShirtList(playerName,seasonName,numbe, clubName, pagenumber, pagesize);
             if (categories != null)
             {
                 return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, categories);

@@ -16,6 +16,9 @@ namespace SWD.SportShirtShop.Services.Interface
         Task<IBusinessResult> DeleteById(int id);
         Task<IBusinessResult> Update(ShirtUpdateRequest request);
         Task<IBusinessResult> GetAllShirtsWithImagesAsync();
-        Task<IBusinessResult> GetShirtList();
+        Task<IBusinessResult> GetShirtList(string? playerName,
+    string? seasonName,
+    int? numbe,
+    string? clubName,int pagenumber,int pagesize);
     }
 }

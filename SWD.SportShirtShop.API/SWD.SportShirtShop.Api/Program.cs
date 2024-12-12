@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerUI;
 using SWD.SportShirtShop.Repo;
 using SWD.SportShirtShop.Repo.Entities;
 using SWD.SportShirtShop.Services.Extension;
@@ -115,6 +116,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 var serectKey = builder.Configuration["Jwt:Serect"];
+
 
 
 app.UseHttpsRedirection();
