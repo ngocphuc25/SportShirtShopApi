@@ -39,7 +39,7 @@ public partial class Shirt
     public virtual PlayerInTournamentClub IdPlayerinTournamentClubNavigation { get; set; }
     [JsonIgnore]
     public virtual ShirtEdition IdShirtEditionNavigation { get; set; }
-    [JsonIgnore]
+   
     public virtual ICollection<Image> Images { get; set; } = new List<Image>();
     [JsonIgnore]
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();

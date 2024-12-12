@@ -30,7 +30,17 @@ namespace SWD.SportShirtShop.Repo.Repositories
 
             return shirts;
         }
+        public async Task<List<Shirt>> GetAllAsync()
+        {
+            var shirts = await _context.Shirts
+                .Include(s => s.Images) // Include để lấy danh sách Images liên kết
+                .ToListAsync();
 
+            // Chuyển đổi sang DTO để trả về kết quả
+
+
+            return shirts;
+        }
         public async Task<Shirt> GetByIdAsync(int id)
         {
             return await _context.Shirts
