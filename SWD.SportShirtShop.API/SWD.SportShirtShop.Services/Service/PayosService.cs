@@ -44,8 +44,8 @@ namespace SWD.SportShirtShop.Services.Service
             }
             var payOS = new PayOS(clientId, apiKey, checksumKey);
 
-             var domain = "https://localhost:7036";
-            //var domain = "https://merciapp-e8cgheehc2bggzdv.japaneast-01.azurewebsites.net";
+             //var domain = "https://localhost:7036";
+            var domain = "https://merciapp-e8cgheehc2bggzdv.japaneast-01.azurewebsites.net";
             var paymentLinkRequest = new PaymentData(
                 orderCode: int.Parse(order.Code),
                 amount: Convert.ToInt32(order.TotalAmmount),

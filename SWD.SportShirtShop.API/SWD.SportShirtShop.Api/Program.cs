@@ -20,13 +20,13 @@ builder.Services.AddApplicationServices();
 // Register your services here
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-//builder.Services.AddScoped<IClubService, ClubService>();
+builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<ITournamentService, TournamentService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
-//builder.Services.AddScoped<ITournamentClubService, TournamentClubService>();
-//builder.Services.AddScoped<IPlayerInTournamentClubService, PlayerInTournamentClubService>();
-//builder.Services.AddScoped<IImageService, ImageS>();
+builder.Services.AddScoped<ITournamentClubService, TournamentClubService>();
+builder.Services.AddScoped<IPlayerInTournamentClubService, PlayerInTournamentClubService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 
 
@@ -117,36 +117,23 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 var serectKey = builder.Configuration["Jwt:Serect"];
 
+
+
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseCors("AllowAllOrigins");
+
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+        c.RoutePrefix = string.Empty;
     });
 }
-app.UseSwagger();
-app.UseSwaggerUI(
-    options =>
-    {
-        options.RoutePrefix = "swagger";
-        options.OAuthAppName("API");
-        options.DisplayRequestDuration();
-        options.EnableTryItOutByDefault();
-        options.DocExpansion(DocExpansion.List);
-        options.DisplayOperationId();
-        options.DefaultModelsExpandDepth(-1);
-        options.EnableFilter(string.Empty);
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-        options.OAuthScopeSeparator(" ");
-        options.DocExpansion(DocExpansion.None);
-
-    });
-app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
-app.UseCors("AllowAllOrigins");
 app.MapControllers();
 
 app.Run();
