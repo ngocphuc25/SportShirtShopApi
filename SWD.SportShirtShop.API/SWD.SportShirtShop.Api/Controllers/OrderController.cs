@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SWD.SportShirtShop.Repo.Entities;
+using SWD.SportShirtShop.Repo.ResponseModel;
 using SWD.SportShirtShop.Services.Base;
 using SWD.SportShirtShop.Services.Interface;
 using SWD.SportShirtShop.Services.RequetsModel.Order;
 using SWD.SportShirtShop.Services.RequetsModel.Shirt;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -39,6 +42,17 @@ namespace SWD.SportShirtShop.Api.Controllers
             return await _orderService.CreateOrder(value);
         }
 
+        [HttpGet("DashboardInfo")]
+        public async Task<IBusinessResult> DashboardInfo()
+        {
+            return await _orderService.DashBoardInfo();
+        }
+
+        //[HttpGet("ProcessingOrder")]
+        //public async Task<PaginatedRes<Order>> GetProcessingOrdersAsync(int pageNumber, int pageSize)
+        //{
+        //    return await _orderService.GetProcessingOrdersAsync(pageNumber, pageSize);
+        //}
         // PUT api/<ShirtController>/5
         //[HttpPut]
         //public async Task<IBusinessResult> Put([FromBody] ShirtUpdateRequest value)

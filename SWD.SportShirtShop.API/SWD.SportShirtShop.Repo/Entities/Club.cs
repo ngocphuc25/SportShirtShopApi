@@ -25,6 +25,6 @@ public partial class Club
     public int? CreateAccount { get; set; }
     [JsonIgnore]
     public virtual ICollection<Player> Players { get; set; } = new List<Player>();
-   
+    
     public virtual ICollection<TournamentClub> TournamentClubs { get; set; } = new List<TournamentClub>();
 }

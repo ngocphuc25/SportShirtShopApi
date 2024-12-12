@@ -84,7 +84,7 @@ namespace SWD.SportShirtShop.Services.Service
 
                 Club newClub = new Club
                 {
-                    Id = clubCreateRequest.Id,
+
                     Name = clubCreateRequest.Name,
                     Logo = clubCreateRequest.Logo,
                     Status = clubCreateRequest.Status,

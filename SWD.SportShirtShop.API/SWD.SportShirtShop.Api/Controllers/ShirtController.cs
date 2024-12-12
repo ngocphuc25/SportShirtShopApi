@@ -24,9 +24,9 @@ namespace SWD.SportShirtShop.Api.Controllers
             return await _shirtService.GetAll();
         }
         [HttpGet("list")]
-        public async Task<IBusinessResult> GetShirtList()
+        public async Task<IBusinessResult> GetShirtList([FromQuery] string? playerName, string? seasonName, int? numbe, string? clubName, int pageNumber, int pageSize)
         {
-            return await _shirtService.GetShirtList();
+            return await _shirtService.GetShirtList(playerName,seasonName,numbe,clubName, pageNumber, pageSize);
         }
         // GET api/<ShirtEditionController>/5
         [HttpGet("{id}")]

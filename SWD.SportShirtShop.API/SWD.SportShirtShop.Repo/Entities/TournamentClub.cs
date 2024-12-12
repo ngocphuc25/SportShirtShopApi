@@ -17,7 +17,7 @@ public partial class TournamentClub
     public DateTime? CreateDate { get; set; }
 
     public int? CreateAccount { get; set; }
-
+    [JsonIgnore]
     public virtual Club IdClubNavigation { get; set; }
     [JsonIgnore]
     public virtual Tournament IdTournamentNavigation { get; set; }
