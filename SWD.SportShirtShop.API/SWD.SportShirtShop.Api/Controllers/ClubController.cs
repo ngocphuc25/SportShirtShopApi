@@ -63,5 +63,11 @@ namespace SWD.SportShirtShop.Api.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("listclub")]
+        public async Task<IBusinessResult> Getlistclubname()
+        {
+            return await _clubService.GetClubName();        
+        }
     }
 }

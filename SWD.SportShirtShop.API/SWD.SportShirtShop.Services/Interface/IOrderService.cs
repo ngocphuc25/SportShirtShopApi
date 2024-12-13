@@ -18,6 +18,9 @@ namespace SWD.SportShirtShop.Services.Interface
         Task<IBusinessResult> DeleteById(int id);
         Task<IBusinessResult> CreateOrder(CreateOrderRequest createOrderRequest);
         Task<IBusinessResult> DashBoardInfo();
-     //   Task<PaginatedResult<Order>> GetProcessingOrdersAsync(int pageNumber, int pageSize);
+        Task<IBusinessResult> UpdateConfirmStatus(int idOrder);
+        Task<IBusinessResult> GetAllYourOrder(int id);
+        Task<IBusinessResult> GetProcessssssssingOrdersAsync(int pageNumber, int pageSize);
+        Task<IBusinessResult> UpdateStatusOrder(int orderId, string status);
     }
 }

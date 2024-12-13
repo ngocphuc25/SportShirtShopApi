@@ -280,16 +280,76 @@ namespace SWD.SportShirtShop.Services.Service
             }
         }
 
-        public async Task<PaginatedResult<Order>> GetProcessingOrdersAsync(int pageNumber, int pageSize)
+        public async Task<IBusinessResult> GetProcessssssssingOrdersAsync(int pageNumber, int pageSize)
         {
             var query = await _unitOfWork.Order.GetProcessingOrdersAsync(pageNumber, pageSize);
 
-            PaginatedResult<Order> result = new PaginatedResult<Order> { Data=query.Data,
-            PageNumber=query.PageNumber,PageSize=query.PageSize,TotalRecords=query.TotalRecords};
+           if (query != null)
+            {
+                return new BusinessResult(Const.SUCCESS_READ_CODE,Const.SUCCESS_READ_MSG, query);
+            }
+            else
+            {
+                return new BusinessResult(Const.FAIL_READ_CODE,Const.FAIL_READ_MSG,new Order());
+            }
             
-            return result;// Chỉ lấy Query từ Repository
+            // Chỉ lấy Qery từ Repository
 
         }
+        public async Task<IBusinessResult> UpdateConfirmStatus(int idOrder)
+        {
+            var order = await _unitOfWork.Order.GetByIdAsync(idOrder);
+            if (order is null)
+            {
+                throw new NotFoundException("Order not found");
+            }
+            order.Status = "Đang được xử lý";
+            var result = await _unitOfWork.Order.UpdateAsync(order);
+            if (result > 0)
+            {
+                return new BusinessResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG);
+            }
+            else
+            {
+                return new BusinessResult(Const.FAIL_UPDATE_CODE, Const.FAIL_UPDATE_MSG);
+            }
+        }
+        public async Task<IBusinessResult> GetAllYourOrder(int id)
+        {
+            try
+            {
+
+
+                var products = await _unitOfWork.Order.GetOrdersByUserIdAsync(id);
+                if (products == null)
+                {
+                    return new BusinessResult(Const.FAIL_READ_CODE, Const.FAIL_READ_MSG, products);
+                }
+                else
+                {
+                    return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, products);
+                }
+            }
+            catch (Exception ex)
+            {
+                return new BusinessResult(Const.ERROR_EXCEPTION, ex.ToString());
+            }
+        }
+        public async Task<IBusinessResult> UpdateStatusOrder(int orderId, string status)
+        {
+            var order = await _unitOfWork.Order.GetByIdAsync(orderId);
+            if (order == null)
+            {
+                throw new ArgumentNullException(nameof(order));
+            }
+            order.PaymentStatus = status;
+            await _unitOfWork.Order.UpdateAsync(order);
+            return new BusinessResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, order);
+        }
+
+
+      
+    }
 
     }
-}
+

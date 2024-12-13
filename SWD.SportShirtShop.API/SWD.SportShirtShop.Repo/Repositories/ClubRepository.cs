@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SWD.SportShirtShop.Repo.Base;
 using SWD.SportShirtShop.Repo.Entities;
+using SWD.SportShirtShop.Repo.ResponseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,14 @@ namespace SWD.SportShirtShop.Repo.Repositories
         {
             return await _context.Clubs.Include(c => c.TournamentClubs)
        .ThenInclude(tc => tc.IdTournamentNavigation).FirstOrDefaultAsync(o => o.Id==id); ;
+        }
+
+        public async Task<List<NameReponse>> GetListClubName()
+        {
+            var querry= _context.Clubs.Select(tc =>new NameReponse { id=tc.Id,Name=tc.Name});
+
+
+            return await querry.ToListAsync();
         }
     }
 }
