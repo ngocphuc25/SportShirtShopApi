@@ -221,8 +221,8 @@ VALUES
     (2, 4, 7, 'Cristiano Ronaldo', '2023-24 Saudi Professional League', 'Al-Nassr', 'Forward, Captain'),
     (3, 5, 10, 'Lionel Messi', '2023-24 Major League Soccer', 'Paris Saint-Germain', 'Forward, Playmaker'),
     (5, 8, 19, 'Mason Mount', '2022–23 Premier League', 'Chelsea', 'Midfielder'),
-    (4, 6, 6, 'Thiago Silva', '2023/2024', 'Chelsea', 'Defender, Experienced Leader');
- 
+    (4, 6, 6, 'Thiago Silva', '2023/2024', 'Chelsea', 'Defender, Experienced Leader'),
+	(1,8,7,	'Mason Mount', '2024–25 Premier League', 'Manchester United', 'Midfielder');
 
  INSERT INTO ShirtEdition ( id_TournamentClub, nameseason,  color, Material,  versionForMatch,   status, note,  code,  createDate,  createAccount)
 VALUES 
@@ -248,3 +248,11 @@ values
 ('https://mufc-live.cdn.scayle.cloud/images/9d8b1e35abd676645560a4bce2b86dca.jpg?brightness=1&width=1536&height=2048&quality=75&bg=ffffff',4),
 ('https://mufc-live.cdn.scayle.cloud/images/e8a92d15e1b75bb7994cb4c7ec3fd30c.jpg?brightness=1&width=576&height=768&quality=75&bg=ffffff',3),
 ('https://images.footballfanatics.com/chelsea/mens-nike-mason-mount-blue-chelsea-2021/22-home-vapor-match-authentic-player-jersey_pi4309000_altimages_ff_4309686-3d6a40133a4042442260alt1_full.jpg?_hv=2&w=900',1)
+
+
+
+
+INSERT INTO Account (username, email, password, Role, Status, Name, Dob, gender, phone)
+VALUES 
+('admin1', 'admin@example.com', 'admin', 'ADMIN', 'ACTIVE', 'Admin Name', '1985-01-01', 'Male', '1234567890'),
+('staff1', 'saaa@example.com', '123', 'STAFF', 'ACTIVE', 'Staff Two', '1992-08-15', 'Male', '1122334455');

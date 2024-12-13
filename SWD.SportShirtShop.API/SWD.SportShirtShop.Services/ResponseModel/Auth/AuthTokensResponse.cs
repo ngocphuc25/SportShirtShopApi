@@ -11,5 +11,6 @@ namespace SWD.SportShirtShop.Services.ResponseModel.Auth
         public string AccessToken { get; set; }
 
         public string RefreshToken { get; set; }
+        public int id { get; set; } 
     }
 }
