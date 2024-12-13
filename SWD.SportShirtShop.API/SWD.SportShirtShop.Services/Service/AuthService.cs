@@ -39,7 +39,7 @@ namespace SWD.SportShirtShop.Services.Service
                 throw new UnauthorizedAccessException("Tài khoản chưa kích hoạt");
             }
             AuthTokensResponse respone = new AuthTokensResponse();
-
+            respone.id = account.Id;
             respone.AccessToken = _tokenService.GenerateAccessToken(account.Id, account.Role, account.Name, account.Email, account.Phone);
             respone.RefreshToken = _tokenService.GenerateRefreshToken();
 
