@@ -10,6 +10,8 @@ namespace SWD.SportShirtShop.Services.Interface
     {
         Task<IBusinessResult> GetAll();
         Task<IBusinessResult> GetById(int id);
+        Task<IBusinessResult> GetClubName();
+
         Task<IBusinessResult> CreateClub(ClubCreateRequest clubCreateRequest);
         Task<IBusinessResult> UpdateClub(ClubUpdateRequets clubUpdateRequest);
         Task<IBusinessResult> Save(Club club);

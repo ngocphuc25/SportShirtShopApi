@@ -95,7 +95,7 @@ namespace SWD.SportShirtShop.Services.Service
 
                 Player newPlayer = new Player
                 {
-                    Id = playerCreateRequest.Id,
+                   
                     IdClub = playerCreateRequest.IdClub,
                     Name = playerCreateRequest.Name,
                     Dob = playerCreateRequest.Dob,
@@ -192,6 +192,20 @@ namespace SWD.SportShirtShop.Services.Service
             catch (Exception ex)
             {
                 return new BusinessResult(Const.ERROR_EXCEPTION, ex.ToString());
+            }
+
+        }
+
+        public async Task<IBusinessResult> GetlistName()
+        {
+            var club = await _unitOfWork.Player.GetListPlayerName();
+            if (club != null)
+            {
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, club);
+            }
+            else
+            {
+                return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
         }
     }

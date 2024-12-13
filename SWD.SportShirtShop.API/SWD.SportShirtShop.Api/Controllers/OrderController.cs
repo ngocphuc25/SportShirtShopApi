@@ -22,7 +22,7 @@ namespace SWD.SportShirtShop.Api.Controllers
             _orderService = orderService;
         }
 
-            [HttpGet]
+        [HttpGet]
         public async Task<IBusinessResult> GetAll()
         {
             return await _orderService.GetAll();
@@ -48,6 +48,29 @@ namespace SWD.SportShirtShop.Api.Controllers
             return await _orderService.DashBoardInfo();
         }
 
+        [HttpGet("ProcessingOrders")]
+        public async Task<IBusinessResult> ListProcessingOrders([FromQuery]int pageNumber, int pageSize)
+        {
+            return await _orderService.GetProcessssssssingOrdersAsync(pageNumber,pageSize);
+        }
+
+        [HttpPut("Confirm")]
+        public async Task<IBusinessResult> UpdateConfirmStatus(int id)
+        {
+            return await _orderService.UpdateConfirmStatus(id);
+        }
+
+        [HttpGet("YourHistoryOrders/{id}")]
+        public async Task<IBusinessResult> GetYoursOrders(int id)
+        {
+            return await _orderService.GetAllYourOrder(id);
+        }
+
+        [HttpPut("updateStatus")]
+        public async Task<IBusinessResult> UpdateStatusOrder(int orderId, string status)
+        {
+            return await _orderService.UpdateStatusOrder(orderId, status);
+        }
         //[HttpGet("ProcessingOrder")]
         //public async Task<PaginatedRes<Order>> GetProcessingOrdersAsync(int pageNumber, int pageSize)
         //{

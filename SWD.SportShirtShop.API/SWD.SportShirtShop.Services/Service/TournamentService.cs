@@ -182,7 +182,18 @@ namespace SWD.SportShirtShop.Services.Service
                 return new BusinessResult(Const.ERROR_EXCEPTION, ex.ToString());
             }
         }
+        public async Task<IBusinessResult> GetTournamentName()
+        {
+            var club = await _unitOfWork.Tournament.GetListTournamentName();
+            if (club != null)
+            {
+                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, club);
+            }
+            else
+            {
+                return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
+            }
+        }
 
-        
     }
 }

@@ -8,7 +8,7 @@ namespace SWD.SportShirtShop.Services.RequetsModel.Player
 {
     public class PlayerCreateRequest
     {
-        public int Id { get; set; }
+        
 
         public int? IdClub { get; set; }
 

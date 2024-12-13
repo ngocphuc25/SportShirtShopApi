@@ -86,7 +86,15 @@ namespace SWD.SportShirtShop.Repo.Repositories
                 PageSize = pageSize
             };
         }
+        public async Task<List<Order>> GetOrdersByUserIdAsync(int userId)
+        {
+            var orders = await _context.Orders
+                .Where(o => o.Id == userId)
+                .Include(o => o.OrderDetails) // Nếu muốn lấy thêm chi tiết đơn hàng
+                .ToListAsync();
 
+            return orders;
+        }
     }
 
 

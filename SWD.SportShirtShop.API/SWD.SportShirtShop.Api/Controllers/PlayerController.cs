@@ -64,5 +64,10 @@ namespace SWD.SportShirtShop.Api.Controllers
 
             return NoContent();
         }
+        [HttpGet("listplayer")]
+        public async Task<IBusinessResult> GetlistPlayerName()
+        {
+            return await  _playerService.GetlistName();
+        }
     }
 }
