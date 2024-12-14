@@ -173,86 +173,114 @@ INSERT INTO Account (username, email, password, Role, Status, Name, Dob, gender,
 VALUES 
 ('admin_user', 'admin@example.com', 'hashed_admin_password', 'ADMIN', 'ACTIVE', 'Admin Name', '1985-01-01', 'Male', '1234567890'),
 ('staff_user1', 'staff1@example.com', 'hashed_staff_password1', 'STAFF', 'ACTIVE', 'Staff One', '1990-05-10', 'Female', '0987654321'),
-('staff_user1', 'staff2@example.com', 'hashed_staff_password2', 'STAFF', 'ACTIVE', 'Staff Two', '1992-08-15', 'Male', '1122334455');
+('staff_user1', 'staff2@example.com', 'hashed_staff_password2', 'STAFF', 'ACTIVE', 'Staff Two', '1992-08-15', 'Male', '1122334455'),
+('admin1', 'admin@gmail.com', 'admin', 'ADMIN', 'ACTIVE', 'Admin Name', '1985-01-01', 'Male', '1234567890'),
+('staff1', 'saaa@example.com', '123', 'STAFF', 'ACTIVE', 'Staff Two', '1992-08-15', 'Male', '1122334455');
+
 
 INSERT INTO Club (Name, Logo, Status, Note, Code, CreateDate, CreateAccount)
 VALUES 
-    ('Manchester United', 'https://upload.wikimedia.org/wikipedia/vi/thumb/a/a1/Man_Utd_FC_.svg/800px-Man_Utd_FC_.svg.png', 'Active', '-', 'MU', GETDATE(), null),
-    ('Real Madrid', 'https://upload.wikimedia.org/wikipedia/vi/thumb/a/a1/Man_Utd_FC_.svg/363px-Man_Utd_FC_.svg.png', 'Active', '-', 'REAL', GETDATE(), null),
-    ('Manchester City', 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/285px-Manchester_City_FC_badge.svg.png', 'Active', '-', 'MC', GETDATE(), 1),
-    ('Chelsea', 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/285px-Chelsea_FC.svg.png', 'Active', '-', 'CHEL', GETDATE(), NULL),
-	('Al Nassr FC','https://upload.wikimedia.org/wikipedia/vi/9/9d/Logo_Al-Nassr.png','Active','-',N'đội bóng có cr7',Getdate(),Null),
-	('Inter Miami CF','https://upload.wikimedia.org/wikipedia/vi/thumb/5/5c/Inter_Miami_CF_logo.svg/285px-Inter_Miami_CF_logo.svg.png','Active','-',N'đội có M10',GETDATE(),1)
+    ('Manchester United', 'https://upload.wikimedia.org/wikipedia/vi/thumb/a/a1/Man_Utd_FC_.svg/800px-Man_Utd_FC_.svg.png', 'Active', '-', 'MU', GETDATE(), null), ---1
+    ('Real Madrid', 'https://upload.wikimedia.org/wikipedia/vi/thumb/a/a1/Man_Utd_FC_.svg/363px-Man_Utd_FC_.svg.png', 'Active', '-', 'REAL', GETDATE(), null), ----2
+    ('Manchester City', 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/285px-Manchester_City_FC_badge.svg.png', 'Active', '-', 'MC', GETDATE(), 1),----3
+    ('Chelsea', 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/285px-Chelsea_FC.svg.png', 'Active', '-', 'CHEL', GETDATE(), NULL),------4
+	('Al Nassr FC','https://upload.wikimedia.org/wikipedia/vi/9/9d/Logo_Al-Nassr.png','Active','-',N'đội bóng có cr7',Getdate(),Null),---------5
+	('Inter Miami CF','https://upload.wikimedia.org/wikipedia/vi/thumb/5/5c/Inter_Miami_CF_logo.svg/285px-Inter_Miami_CF_logo.svg.png','Active','-',N'đội có M10',GETDATE(),1), ---------6
+	('Arsenal','https://upload.wikimedia.org/wikipedia/vi/thumb/5/53/Arsenal_FC.svg/270px-Arsenal_FC.svg.png','Active','-',N'Pháo thủ',GETDATE(),1);------------------7
 INSERT INTO Tournament (StartDate, EndDate, Name, Status, Description, Note, Code, CreateDate, CreateAccount)
 VALUES
-    ('2024-08-11', '2024-05-19', '2023-24 Premier League', 'Completed', N'Giải ngoại hạng Anh 23-24', 'Manchester City is a champion', 'P2324', GETDATE(), null),
-    ('2022-8-5', '2023-5-28', '2022–23 Premier League', 'Completed', N'Giải ngoại hạng Anh 22-23', 'Manchester City is a champion', 'P2223', GETDATE(), null),
-    ('2024-08-28', '2023-5-31', '2024–25 UEFA Champions League', 'Active', N'Champions League 24-25', '-', 'CL2425', GETDATE(), null),
-	('2023-1-1','2024-1-1','2023-24 Saudi Professional League','Completed',N'Giải bóng đá chuyên nghiệp Ả Rập Xê Út','-','a',GETDATE(),1),
-	('2023-1-1','2024-1-1','2023-24 Major League Soccer','Completed',N'Giải bóng đá nhà nghề Mỹ','-','NFL',GETDATE(),1)
+    ('2024-08-11', '2024-05-19', '2023-24 Premier League', 'Completed', N'Giải ngoại hạng Anh 23-24', 'Manchester City is a champion', 'P2324', GETDATE(), null), ----1
+    ('2022-8-5', '2023-5-28', '2022–23 Premier League', 'Completed', N'Giải ngoại hạng Anh 22-23', 'Manchester City is a champion', 'P2223', GETDATE(), null), ----2
+    ('2024-08-28', '2023-5-31', '2024–25 UEFA Champions League', 'Active', N'Champions League 24-25', '-', 'CL2425', GETDATE(), null), ----3
+	('2023-1-1','2024-1-1','2023-24 Saudi Professional League','Completed',N'Giải bóng đá chuyên nghiệp Ả Rập Xê Út','-','a',GETDATE(),1), ---4
+	('2023-1-1','2024-1-1','2023-24 Major League Soccer','Completed',N'Giải bóng đá nhà nghề Mỹ','-','NFL',GETDATE(),1), ----5
+	('2024-8-16','2025-5-25','2024-25 Premier League','Active',N'Ngoại hạng anh 24-25','-','P2425',GETDATE(),1);-----6
 INSERT INTO Player (id_Club, Name, Dob, Note, Code, CreateDate, CreateAccount)
 VALUES
-    (1, 'Marcus Rashford', '1997-10-31', '-', 'MU001', GETDATE(), 1),
-    (1, 'Bruno Fernandes', '1994-09-08', '-', 'MU002', GETDATE(), 1),
-    (1, 'Harry Maguire', '1993-03-05', '-', 'MU003', GETDATE(), 1),
-	(5, 'Cristiano Ronaldo', '1985-02-05', 'Forward, Captain', 'CR7', GETDATE(), 1),
-	(6, 'Lionel Messi', '1987-06-24', 'Forward, Playmaker', 'M10', GETDATE(), 1),
-	 (4, 'Thiago Silva', '1984-09-22', 'Defender, Experienced Leader', 'CHE001', GETDATE(), 1),
-    (4, N'Golo Kante', '1991-03-29', 'Midfielder, Playmaker' , 'CHE002', GETDATE(), 1),
-	(1, 'Mason Mount', '1999-01-10',  'English midfielder','CHE001', GETDATE(), 1);
-
+    (1, 'Marcus Rashford', '1997-10-31', '-', 'MU001', GETDATE(), 1), --1
+    (1, 'Bruno Fernandes', '1994-09-08', '-', 'MU002', GETDATE(), 1), --2
+    (1, 'Harry Maguire', '1993-03-05', '-', 'MU003', GETDATE(), 1), --3
+	(5, 'Cristiano Ronaldo', '1985-02-05', 'Forward, Captain', 'CR7', GETDATE(), 1), --4
+	(6, 'Lionel Messi', '1987-06-24', 'Forward, Playmaker', 'M10', GETDATE(), 1), ---5
+	 (4, 'Thiago Silva', '1984-09-22', 'Defender, Experienced Leader', 'SILV', GETDATE(), 1), ----6
+    (4, N'Golo Kante', '1991-03-29', 'Midfielder, Playmaker' , 'KANT', GETDATE(), 1), -----7
+	(1, 'Mason Mount', '1999-01-10',  'English midfielder','MM', GETDATE(), 1), ---8
+	(7, 'Martin Odegaard', '1998-12-17', '-----', 'ODE', GETDATE()-1, 1),--------9
+	(7, 'Raheem Sterling', '1994-12-8', 'Captain of Arsenal', 'STERL', GETDATE()-1, 1);--------10
+	
 	
 INSERT INTO TournamentClub (id_Tournament, id_Club, createDate, createAccount)
 VALUES 
-(1, 1, GETDATE(), 1), -- Linking Tournament ID 1 with Club ID 1
-(1, 3, GETDATE(), 1),
-(1, 4, GETDATE(), 1),
-(2, 1, GETDATE(), 1), -- Linking Tournament ID 1 with Club ID 1
-(2, 3, GETDATE(), 1),
+(1, 1, GETDATE(), 1), -- Linking Tournament ID 1 with Club ID 1 ---1
+(1, 3, GETDATE(), 1), ---2
+(1, 4, GETDATE(), 1),     --------3
+(2, 1, GETDATE(), 1), -- Linking Tournament ID 1 with Club ID 1     ----------4
+ (2, 3, GETDATE(), 1),        -------------5
 (2, 4, GETDATE(), 1),
-(2,5,GETDATE(),1),
-(5,6,Getdate(),1);
+(2,5,GETDATE(),1),-------------7
+(5,6,Getdate(),1),
+(6,1,Getdate(),1),---------------9
+(6,4,Getdate(),1),
+(6,7,Getdate(),1);--------------------11
 
 INSERT INTO PlayerInTournamentClub (id_TournamentClub, id_Player, Number, PlayerName, SeasonName, ClubName, Description)
 VALUES
-	(1, 1, 10, 'Marcus Rashford', '2023-24 Premier League', 'Manchester United', 'Forward, Star Player'),
-	(2, 1, 10, 'Marcus Rashford', '2022–23 Premier League', 'Manchester United', 'Forward, Star Player'),
-    (1, 2, 8, 'Bruno Fernandes', '2023-24 Premier League', 'Manchester United', 'Midfielder, Playmaker'),
-    (2, 4, 7, 'Cristiano Ronaldo', '2023-24 Saudi Professional League', 'Al-Nassr', 'Forward, Captain'),
-    (3, 5, 10, 'Lionel Messi', '2023-24 Major League Soccer', 'Paris Saint-Germain', 'Forward, Playmaker'),
-    (5, 8, 19, 'Mason Mount', '2022–23 Premier League', 'Chelsea', 'Midfielder'),
-    (4, 6, 6, 'Thiago Silva', '2023/2024', 'Chelsea', 'Defender, Experienced Leader'),
-	(1,8,7,	'Mason Mount', '2024–25 Premier League', 'Manchester United', 'Midfielder');
+	(1, 1, 10, 'Marcus Rashford', '2023-24 Premier League', 'Manchester United', 'Forward, Star Player'),--------1
+	(9, 1, 10, 'Marcus Rashford', '2024-25 Premier League', 'Manchester United', 'Forward, Star Player'),-----------2
+    (9, 2, 8, 'Bruno Fernandes', '2024-25 Premier League', 'Manchester United', 'Midfielder, Playmaker'),----------3
+    (2, 4, 7, 'Cristiano Ronaldo', '2023-24 Saudi Professional League', 'Al-Nassr', 'Forward, Captain'),-----------4
+    (3, 5, 10, 'Lionel Messi', '2023-24 Major League Soccer', 'Paris Saint-Germain', 'Forward, Playmaker'),-----------5
+    (5, 8, 19, 'Mason Mount', '2022–23 Premier League', 'Chelsea', 'Midfielder'),--------------6
+    (4, 6, 6, 'Thiago Silva', '2023/2024', 'Chelsea', 'Defender, Experienced Leader'),----------7
+	(9,8, 7,	'Mason Mount', '2024–25 Premier League', 'Manchester United', 'Midfielder'),------------8
+	 (11, 9, 8, 'Martin Odegaard', '2024–25 Premier League', 'Arsenal', 'Midfielder, Experienced Leader'),------------9
+	 (11, 10, 30, 'Raheem Sterling', '2024–25 Premier League', 'Arsenal', 'Winger, Experienced Leader');--------------10
 
  INSERT INTO ShirtEdition ( id_TournamentClub, nameseason,  color, Material,  versionForMatch,   status, note,  code,  createDate,  createAccount)
 VALUES 
-(    3, '2023-24 Premier League','Blue','Away edition',  'Cotton','Active', 'Limited edition for the 2023/24 season', 'R001',    GETDATE(), 1 ),
-(    1, '2023-24 Premier League','Red', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 ),
-(    1, '2023-24 Premier League','Blue', 'Away edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R003',    GETDATE(), 1 ),
-(    1, '2023-24 Premier League','White', 'Third edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 );
+(    3, '2023-24 Premier League','Blue','Away edition',  'Cotton','Active', 'Limited edition for the 2023/24 season', 'R001',    GETDATE(), 1 ),----1
+(    1, '2023-24 Premier League','Red', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 ),-----2
+(    1, '2023-24 Premier League','Blue', 'Away edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R003',    GETDATE(), 1 ),---------3
+(    1, '2023-24 Premier League','White', 'Third edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 ),--------4
+(   11 , '2024-25 Premier League','Red', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2024/25 season', 'ARS01',    GETDATE(), 1 ),---------5
+(   11, '2024-25 Premier League','Black', 'Away edition' ,'Cotton','Active', 'Limited edition for the 2024/25 season', 'ARS02',    GETDATE(), 1 ),--------6
+(    11, '2024-25 Premier League','Blue', 'Third edition' ,'Cotton','Active','Limited edition for the 2024/25 season', 'ARS03',    GETDATE(), 1 ),------------7
+(   9 , '2024-25 Premier League','Red', 'Home edition' ,'Cotton','Active', 'Limited edition for the 2023/24 season', 'R002',    GETDATE(), 1 );--------8
 
 
 INSERT INTO Shirt (id_shirtEdition, id_PlayerinTournamentClub, name,price, salePrice, totalSold,description, quantity_stock, status,code,createDate,createAccount, updatedDate)
 VALUES 
 
-(   1,  6,'Mason Mount 2024 Jersey',1000, 5000, 0,'Limited edition shirt for the 2024 season featuring Mason Mount',100, 'Active','CHELSEA00019',GETDATE(), 1  ,GETDATE() ),
-(   2,  null,'Manchester United 23/24 Home Jersey',1000, 5000, 0,'Manchester United 23/24 Home Jersey',100, 'Active','MU0001',GETDATE(), 1  ,GETDATE() ),
-(   3,  null,'Manchester United 23/24 Away Jersey',1000, 5000, 0,N'Siêu đẹp luôn',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() ),
-(   4,  null,'Manchester United 23/24 Third Jersey',1000, 5000, 0,'Manchester United 23/24 Third Jersey',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() ),
-(   4,  1,' Marcus Rashford Manchester United 23/24 Third Jersey',1000, 5000, 0,N'Limited',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() );
-
+(   1,  6,'Mason Mount 2024 Jersey',10000, 5000, 0,'Limited edition shirt for the 2024 season featuring Mason Mount',100, 'Active','CHELSEA00019',GETDATE(), 1  ,GETDATE() ),-------1
+(   2,  null,'Manchester United 23/24 Home Jersey',10000, 5000, 0,'Manchester United 23/24 Home Jersey',100, 'Active','MU0001',GETDATE(), 1  ,GETDATE() ),----------2
+(   3,  null,'Manchester United 23/24 Away Jersey',10000, 5000, 0,N'Siêu đẹp luôn',100, 'Active','MU0002',GETDATE(), 1  ,GETDATE() ),-----------3
+(   4,  null,'Manchester United 23/24 Third Jersey',10000, 5000, 0,'Manchester United 23/24 Third Jersey',100, 'Active','MU0003',GETDATE(), 1  ,GETDATE() ),---------4
+(   5,  null,'ARSENAL 24/25 Home Jersey',10000, 5000, 0,'ARSENAL 24/25 Home Jersey',100, 'Active','ARS01',GETDATE(), 1  ,GETDATE() ),-----------------5
+(   6,  null,'ARSENAL 24/25 Away Jersey',10000, 5000, 0,'ARSENAL 24/25 Away Jersey',100, 'Active','ARS02',GETDATE(), 1  ,GETDATE() ),------------------6
+(   7,  null,'ARSENAL 24/25 Third Jersey',10000, 5000, 0,'ARSENAL 24/25 Third Jersey',100, 'Active','ARS03',GETDATE(), 1  ,GETDATE() ),-------------7
+(   7,  9,'ARSENAL 24/25 Third Jersey',10000, 5000, 0,'ARSENAL 24/25 Third Jersey',100, 'Active','ARS03',GETDATE(), 1  ,GETDATE() ),------------8
+(   7,  10,'ARSENAL 24/25 Third Jersey',10000, 5000, 0,'ARSENAL 24/25 Third Jersey',100, 'Active','ARS03',GETDATE(), 1  ,GETDATE() ),-----------------9
+( 8,  8,' Mason Mount Manchester United 24/25 Third Jersey',10000, 5000, 0,N'Limited',100, 'Active','MU0004',GETDATE(), 1  ,GETDATE() ),--------------------10
+( 8,  2,' Marcus Rashford Manchester United 24/25 Third Jersey',10000, 5000, 0,N'Limited',100, 'Active','MU0004',GETDATE(), 1  ,GETDATE() ),----------11
+( 8,  3,' Bruno Fernandes Manchester United 24/25 Third Jersey',10000, 5000, 0,N'Limited',100, 'Active','MU0004',GETDATE(), 1  ,GETDATE() );-------------12
 INSERT INTO Image( link,id_Shirt)
 values
 ('https://mufc-live.cdn.scayle.cloud/images/8ed8c14d2c334556c14da1116ba32a50.jpg?brightness=1&width=576&height=768&quality=75&bg=ffffff',2),
-('https://mufc-live.cdn.scayle.cloud/images/6a7bd4cdcefb410b1238669089b40532.png?brightness=1&width=576&height=768&quality=75&bg=ffffff',5),
+('https://metro.co.uk/wp-content/uploads/2023/07/Mount-853c_1688711331.png',10),
 ('https://mufc-live.cdn.scayle.cloud/images/9d8b1e35abd676645560a4bce2b86dca.jpg?brightness=1&width=1536&height=2048&quality=75&bg=ffffff',4),
 ('https://mufc-live.cdn.scayle.cloud/images/e8a92d15e1b75bb7994cb4c7ec3fd30c.jpg?brightness=1&width=576&height=768&quality=75&bg=ffffff',3),
-('https://images.footballfanatics.com/chelsea/mens-nike-mason-mount-blue-chelsea-2021/22-home-vapor-match-authentic-player-jersey_pi4309000_altimages_ff_4309686-3d6a40133a4042442260alt1_full.jpg?_hv=2&w=900',1)
+('https://images.footballfanatics.com/chelsea/mens-nike-mason-mount-blue-chelsea-2021/22-home-vapor-match-authentic-player-jersey_pi4309000_altimages_ff_4309686-3d6a40133a4042442260alt1_full.jpg?_hv=2&w=900',1),
+('https://product.hstatic.net/200000477321/product/tai_xuong_-_2024-11-29t102140.217_70d8f617fe9841978a1e666ee2eb7e13_grande.png',5),
+('https://i1.adis.ws/i/ArsenalDirect/miz0114_f1',7),
+('https://i1.adis.ws/i/ArsenalDirect/mit6148_f1',6),
+('https://i1.adis.ws/i/ArsenalDirect/mit6148_f1',8),
+('https://i1.adis.ws/i/ArsenalDirect/mit6148_f1',9),
+('https://i1.adis.ws/i/ArsenalDirect/mit6148_f1',10),
+('https://mufc-live.cdn.scayle.cloud/images/9d8b1e35abd676645560a4bce2b86dca.jpg?brightness=1&width=1536&height=2048&quality=75&bg=ffffff',12),
+('https://mufc-live.cdn.scayle.cloud/images/9d8b1e35abd676645560a4bce2b86dca.jpg?brightness=1&width=1536&height=2048&quality=75&bg=ffffff',11);
 
 
 
 
-INSERT INTO Account (username, email, password, Role, Status, Name, Dob, gender, phone)
-VALUES 
-('admin1', 'admin@example.com', 'admin', 'ADMIN', 'ACTIVE', 'Admin Name', '1985-01-01', 'Male', '1234567890'),
-('staff1', 'saaa@example.com', '123', 'STAFF', 'ACTIVE', 'Staff Two', '1992-08-15', 'Male', '1122334455');
+
+
