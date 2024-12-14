@@ -87,22 +87,26 @@ namespace SWD.SportShirtShop.Services.Service
                 int result = -1;
                 //var userId = claim.FindFirst("id")?.Value;
 
-
+                
                 
                     var account = _unitOfWork.Account.GetById(request.CreateAccount.Value);
-                    var tournament = _unitOfWork.Tournament.GetById(request.IdTournament.Value);
+                    var tournament = _unitOfWork.TournamentClub.GetById(request.IdTournamentClub);
                     if (account == null) { request.CreateAccount = null; }
-                    if (tournament == null) { request.IdTournament = null; }
+                        if (tournament == null) { throw new InvalidOperationException("ko thhay tournamentclub"); }
+                var a = _unitOfWork.Tournament.GetById(tournament.IdTournament.Value);
                     //if (userId == null)
                     //{
                     //    return new BusinessResult(Const.ERROR_EXCEPTION, "Do not have idUser");
                     //}
                     //var product = C.Adapt<Product>();
 
-                    ShirtEdition newClub = new ShirtEdition
+               ShirtEdition newClub = new ShirtEdition
                     {
-                      
-                        IdTournamentClub = request.IdTournament,
+                        Color =request.Color,
+                        VersionForMatch = request.VersionForMatch,
+                        Material =request.Material,
+                        Nameseason = a.Name,
+                        IdTournamentClub = request.IdTournamentClub,
                         Status = request.Status,
                         Note = request.Note,
                         Code = request.Code,
