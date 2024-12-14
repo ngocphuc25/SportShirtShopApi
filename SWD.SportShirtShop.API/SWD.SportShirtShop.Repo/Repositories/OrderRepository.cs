@@ -89,7 +89,7 @@ namespace SWD.SportShirtShop.Repo.Repositories
         public async Task<List<Order>> GetOrdersByUserIdAsync(int userId)
         {
             var orders = await _context.Orders
-                .Where(o => o.Id == userId)
+                .Where(o => o.IdAccount == userId)
                 .Include(o => o.OrderDetails) // Nếu muốn lấy thêm chi tiết đơn hàng
                 .ToListAsync();
 
