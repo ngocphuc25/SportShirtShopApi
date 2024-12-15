@@ -303,7 +303,7 @@ namespace SWD.SportShirtShop.Services.Service
             {
                 throw new NotFoundException("Order not found");
             }
-            order.Status = "Đang được xử lý";
+            order.Status = "Đã xác nhận";
             var result = await _unitOfWork.Order.UpdateAsync(order);
             if (result > 0)
             {
