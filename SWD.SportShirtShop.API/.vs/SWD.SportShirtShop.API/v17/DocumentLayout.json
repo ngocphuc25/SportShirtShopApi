@@ -334,8 +334,7 @@
               "RelativeToolTip": "SWD.SportShirtShop.Repo\\Repositories\\OrderRepository.cs",
               "ViewState": "AQIAACQAAAAAAAAAAIAwwFsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:09:31.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T03:09:31.207Z"
             },
             {
               "$type": "Document",
@@ -347,8 +346,7 @@
               "RelativeToolTip": "SWD.SportShirtShop.Api\\Controllers\\OrderController.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAowDsAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:18:16.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T03:18:16.442Z"
             },
             {
               "$type": "Document",
@@ -360,8 +358,7 @@
               "RelativeToolTip": "SWD.SportShirtShop.Services\\Interface\\IOrderService.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIAwwBQAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:18:41.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T03:18:41.278Z"
             },
             {
               "$type": "Document",
@@ -371,7 +368,7 @@
               "RelativeDocumentMoniker": "SWD.SportShirtShop.Services\\Service\\OrderService.cs",
               "ToolTip": "D:\\KY 8\\SportShirtShop\\SportShirtShopApi\\SWD.SportShirtShop.API\\SWD.SportShirtShop.Services\\Service\\OrderService.cs",
               "RelativeToolTip": "SWD.SportShirtShop.Services\\Service\\OrderService.cs",
-              "ViewState": "AQIAAO8AAAAAAAAAAIAwwDEBAAAnAAAA",
+              "ViewState": "AQIAAEABAAAAAAAAAIAwwFgBAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T03:10:57.525Z",
               "EditorCaption": ""
