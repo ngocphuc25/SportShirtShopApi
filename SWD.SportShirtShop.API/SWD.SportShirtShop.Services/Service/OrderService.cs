@@ -342,7 +342,7 @@ namespace SWD.SportShirtShop.Services.Service
             {
                 throw new ArgumentNullException(nameof(order));
             }
-            order.PaymentStatus = status;
+            order.Status = status;
             await _unitOfWork.Order.UpdateAsync(order);
             return new BusinessResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, order);
         }
